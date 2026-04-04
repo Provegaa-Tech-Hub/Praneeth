@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Design Services ID Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #3b3bff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px 20px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ── FRONT CARD ── */
+    .card-front {
+      width: 280px;
+      min-height: 480px;
+      background: #ffffff;
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      padding: 28px 24px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+
+    /* Pink blob top-left */
+    .card-front::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 120px;
+      height: 120px;
+      background: #f9c4c8;
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    /* Dotted pattern top-right */
+    .dots-tr {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 60px;
+      height: 60px;
+      background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 7px 7px;
+    }
+
+    /* Dotted pattern bottom-left */
+    .dots-bl {
+      position: absolute;
+      bottom: 80px;
+      left: 14px;
+      width: 50px;
+      height: 50px;
+      background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 7px 7px;
+    }
+
+    /* Small square outline top-left */
+    .square-outline {
+      position: absolute;
+      top: 80px;
+      left: 22px;
+      width: 28px;
+      height: 28px;
+      border: 2px solid #bbb;
+    }
+
+    /* Grid pattern behind photo */
+    .grid-bg {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      width: 80px;
+      height: 80px;
+      background-image:
+        linear-gradient(#ddd 1px, transparent 1px),
+        linear-gradient(90deg, #ddd 1px, transparent 1px);
+      background-size: 14px 14px;
+      opacity: 0.5;
+      border-radius: 4px;
+    }
+
+    .front-top-label {
+      position: relative;
+      z-index: 2;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .front-top-label h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.3;
+    }
+
+    /* Photo circle */
+    .photo-circle {
+      position: relative;
+      z-index: 2;
+      margin-top: 16px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+      background: linear-gradient(135deg, #f9c4c8 0%, #fde3c0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Placeholder person silhouette if no img */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .photo-placeholder svg {
+      width: 60px;
+      height: 60px;
+      fill: rgba(255,255,255,0.7);
+    }
+
+    .front-name {
+      position: relative;
+      z-index: 2;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .front-name h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #222;
+      letter-spacing: 0.3px;
+    }
+
+    .front-name p {
+      font-size: 10px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .front-divider {
+      width: 100%;
+      height: 1px;
+      background: #eee;
+      margin: 16px 0 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .front-meta {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 8px;
+    }
+
+    .front-meta p {
+      font-size: 11.5px;
+      color: #333;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+
+    .front-meta p span {
+      font-weight: 700;
+    }
+
+    /* Bottom-right dot decoration */
+    .dot-br {
+      position: absolute;
+      bottom: 24px;
+      right: 22px;
+      width: 8px;
+      height: 8px;
+      background: #3b3bff;
+      border-radius: 50%;
+    }
+
+    /* Small cross/plus icon */
+    .cross-bl {
+      position: absolute;
+      bottom: 50px;
+      left: 18px;
+      width: 14px;
+      height: 14px;
+    }
+    .cross-bl::before, .cross-bl::after {
+      content: '';
+      position: absolute;
+      background: #aaa;
+    }
+    .cross-bl::before {
+      width: 2px; height: 100%;
+      left: 50%; transform: translateX(-50%);
+    }
+    .cross-bl::after {
+      height: 2px; width: 100%;
+      top: 50%; transform: translateY(-50%);
+    }
+
+    /* ── BACK CARD ── */
+    .card-back {
+      width: 280px;
+      min-height: 480px;
+      background: #ffffff;
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+
+    /* Top white content area */
+    .back-top {
+      padding: 28px 24px 16px;
+      flex: 1;
+      position: relative;
+      z-index: 2;
+    }
+
+    .back-top h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .back-top p {
+      font-size: 10.5px;
+      color: #777;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .back-top p + p {
+      margin-top: 10px;
+    }
+
+    .back-contact-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    .back-contact-info {
+      font-size: 10.5px;
+      color: #777;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* Decorative elements in back top area */
+    .back-dot-pink {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      background: #f9a8b0;
+      border-radius: 50%;
+    }
+
+    .back-dots-br {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 44px;
+      height: 44px;
+      background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 7px 7px;
+    }
+
+    /* Star/asterisk decoration */
+    .back-star {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      font-size: 16px
+       color: #f9a8b0;
+      line-height: 1;
+    }
+
+    /* Bottom cyan/teal illustration section */
+    .back-bottom {
+      position: relative;
+      height: 200px;
+      background: #4ecdc4;
+      overflow: hidden;
+    }
+
+    /* Larger circle behind laptop */
+    .back-bottom::before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      background: #3ab8b0;
+      border-radius: 50%;
+    }
+
+    /* Blue circle top-right area of back-bottom */
+    .bb-circle-blue {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      background: #3b3bff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 700;
+      font-family: monospace;
+      z-index: 3;
+    }
+
+    /* Yellow pill/toggle */
+    .bb-toggle {
+      position: absolute;
+      bottom: 30px;
+      right: 32px;
+      width: 34px;
+      height: 18px;
+      background: #ffe066;
+      border-radius: 9px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+    .bb-toggle::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 50%;
+      margin-left: auto;
+    }
+
+    /* Dots pattern in back-bottom */
+    .bb-dots {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 40px;
+      height: 40px;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+      background-size: 7px 7px;
+      z-index: 3;
+    }
+
+    /* Laptop SVG illustration */
+    .laptop-wrap {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      width: 140px;
+    }
+
+    .laptop-wrap svg {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.2));
+    }
+
+    /* Arrow cursor icon */
+    .bb-arrow {
+      position: absolute;
+      bottom: 28px;
+      right: 50px;
+      z-index: 5;
+      width: 28px;
+      height: 28px;
+    }
+
+    .bb-arrow svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Browser window dots top-left of back-bottom */
+    .bb-browser-dots {
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      display: flex;
+      gap: 4px;
+      z-index: 3;
+    }
+    .bb-browser-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      display: block;
+    }
+
+    /* Dashed rectangle in back-bottom top-left */
+    .bb-dashed-rect {
+      position: absolute;
+      top: 34px;
+      left: 14px;
+      width: 60px;
+      height: 38px;
+      border: 1.5px dashed rgba(255,255,255,0.5);
+      border-radius: 4px;
+      z-index: 3;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+ <div class="card-wrapper">
+
+    <!-- ══════════════ FRONT CARD ══════════════ -->
+    <div class="card-front">
+      <!-- Decorative elements -->
+      <div class="dots-tr"></div>
+      <div class="dots-bl"></div>
+      <div class="square-outline"></div>
+      <div class="grid-bg"></div>
+      <div class="dot-br"></div>
+      <div class="cross-bl"></div>
+
+      <!-- Title -->
+      <div class="front-top-label">
+        <h2>Web Design<br>Services</h2>
+      </div>
+
+      <!-- Photo -->
+      <div class="photo-circle">
+        <!-- Placeholder silhouette -->
+        <div class="photo-placeholder">
+          <img src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img">
+        </div>
+      </div>
+
+      <!-- Name & Position -->
+      <div class="front-name">
+        <h1>SURAM PRANEETH</h1>
+        <p>Position</p>
+      </div>
+
+      <div class="front-divider"></div>
+
+      <!-- ID & Expiry -->
+      <div class="front-meta">
+        <p><span>ID:</span> 90082763</p>
+        <p><span>EX:</span> DD • MM • YY</p>
+      </div>
+    </div>
+
+    <!-- ══════════════ BACK CARD ══════════════ -->
+    <div class="card-back">
+
+      <!-- Top text content -->
+      <div class="back-top">
+        <div class="back-dot-pink"></div>
+        <div class="back-dots-br"></div>
+        <div class="back-star">✳</div>
+
+        <h3>Terms &amp; Conditions</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</p>
+        <p>Laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+
+        <p class="back-contact-title">Contact</p>
+        <p class="back-contact-info">
+          9392375398 &nbsp;•&nbsp; praneethsuram041@gmail.com <br>
+          website.com
+        </p>
+      </div>
+
+      <!-- Bottom cyan illustration -->
+      <div class="back-bottom">
+        <!-- Browser dots -->
+        <div class="bb-browser-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <!-- Dashed rectangle -->
+        <div class="bb-dashed-rect"></div>
+
+        <!-- Blue circle with {} -->
+        <div class="bb-circle-blue">{}</div>
+
+        <!-- Yellow toggle -->
+        <div class="bb-toggle"></div>
+
+        <!-- Dot pattern -->
+        <div class="bb-dots"></div>
+
+        <!-- Laptop SVG -->
+        <div class="laptop-wrap">
+          <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Laptop base -->
+            <rect x="10" y="14" width="140" height="82" rx="6" ry="6" fill="#f0f0f0"/>
+            <!-- Screen bezel -->
+            <rect x="10" y="14" width="140" height="72" rx="6" ry="6" fill="#e0e0e0"/>
+            <!-- Screen -->
+            <rect x="18" y="20" width="124" height="60" rx="3" ry="3" fill="#1a1a2e"/>
+            <!-- Screen glare -->
+            <rect x="20" y="22" width="20" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+            <!-- Keyboard base -->
+              <rect x="5" y="88" width="150" height="10" rx="3" ry="3" fill="#d0d0d0"/>
+            <!-- Trackpad -->
+            <rect x="60" y="82" width="40" height="8" rx="2" ry="2" fill="#c8c8c8"/>
+            <!-- Hinge line -->
+            <line x1="10" y1="86" x2="150" y2="86" stroke="#bbb" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <!-- Arrow cursor -->
+        <div class="bb-arrow">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="4,2 4,20 9,15 13,22 16,20.5 12,13.5 19,13.5" fill="white" stroke="#ddd" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
