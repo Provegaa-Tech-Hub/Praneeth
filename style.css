@@ -1,0 +1,442 @@
+.body {
+    background: #043873;
+}
+
+.navbar {
+    display: flex;
+    height: 40px;
+    border: 0px solid white;
+}
+
+.header {
+    align-items: center;
+    background: #043873;
+    color: white;
+    padding-bottom: 50px;
+
+}
+
+.anchor_width {
+    padding: 20px;
+}
+
+.nav_styles {
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.img_styles {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.nav_buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+
+}
+
+.login_styles {
+    border: none;
+    background: #fae191;
+    color: black;
+    border-radius: 5px;
+    width: 57px;
+    height: 32px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.try_styles {
+    background: #4f9cf9;
+    color: white;
+    border-radius: 5px;
+    height: 32px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.text_arr {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+}
+
+.text_arr1 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-size: 11px;
+
+}
+
+.try_styles1 {
+    background: #4f9cf9;
+    color: white;
+    border-radius: 5px;
+    height: 32px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+.box {
+    width: 510px;
+    height: 300px;
+    background: #c4defd;
+    margin-top: 60px;
+}
+@keyframes fadein{
+    from {opacity: 0; }
+    to{opacity: 1; }
+}
+.box_ani{
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+   
+
+
+.box1 {
+    background: #c4defd;
+    margin-top: 60px;
+    height: 300px;
+    width: 350px;
+    margin-left: 90px;
+}
+@keyframes bounce{
+    0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+.anibox{
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: normal;animation-fill-mode: both;
+
+}
+
+.image1 {
+    width: 510px;
+    height: 300px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.header1 {
+    align-items: center;
+    background: #043873;
+    color: white;
+    padding-bottom: 50px;
+    margin-top: 190px;
+
+}
+
+.navbar1 {
+    height: 40px;
+    border: 0px solid white;
+}
+
+.text_arr2 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.text_arr3 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-size: 11px;
+    margin-left: 230px;
+
+}
+
+.main_card {
+    display: flex;
+    padding-left: 90px;
+    margin-top: 50px;
+}
+
+.maindiv {
+    width: 330px;
+    height: 410px;
+    margin: 50px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gold;
+}
+
+.text_arr4 {
+    font-family: "Roboto", sans-serif;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.text_arr5 {
+    font-family: "Roboto", sans-serif;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text_arr6 {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.started {
+    border: 1px solid gold;
+    margin-left: 35px;
+    padding: 5px 15px;
+}
+
+.maindiv1 {
+    width: 330px;
+    height: 475px;
+    margin: 20px;
+    border-radius: 10px;
+    background: #043873;
+    color: white;
+}
+
+ul li {
+    margin: 10px;
+}
+
+.navbar2 {
+    padding: 60px;
+    background: #043873;
+    margin-top: 40px;
+}
+
+.text_arr7 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.text_arr8 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    padding: 10px 250px;
+
+}
+
+.image_styles {
+    width: 50px;
+    height: 50px;
+    margin-top: 31px;
+}
+
+.micro_styles {
+    width: 170px;
+    height: 107px;
+
+}
+
+.slack_styles {
+    width: 100px;
+    height: 100px;
+}
+
+.logo_styles {
+    width: 25%;
+}
+
+.app_styles {
+    width: 365px;
+    height: 327px;
+    margin-left: 80px;
+}
+
+.favnav_styles {
+    padding: 60px;
+    background: #043873;
+}
+
+.humanimg_styles {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.card_styles {
+    width: 319px;
+    height: 290px;
+    margin: 50px 20px 20px 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.text_card {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+    margin-bottom: 31px;
+}
+
+.quote_styles {
+    margin-left: 20px;
+}
+
+.footer_styles {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin-left: 20px;
+
+}
+
+.footer_styles1 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 13px;
+
+}
+
+.card_styles1 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 319px;
+    height: 290px;
+    margin: 50px 20px 20px 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 53px;
+}
+
+.contact_styles {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+.whitepce_styles {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.whitepce_styles1 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    padding: 10px 250px;
+
+}
+
+.mainlogo {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+.whitepce_styles2 {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 11px;
+    margin-top: 5px;
+    line-height: 18px;
+}
+
+.product_styles {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 13px;
+    margin-top: 18px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.overview{
+    font-family:"Roboto", sans-serif ;
+    color: #fae191;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.pricing{
+    font-family:"Roboto", sans-serif ;
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.icons{
+    height: 33px;
+}
+.try{
+     font-family: "Montserrat", sans-serif;
+     color: white;
+    font-weight: 600;
+    margin-top: 18px;
+
+}
+.strtbutton{
+    background: #4f9cf9;
+    color: white;
+    border-radius: 5px;
+    height: 32px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    margin-top: 17px;
+}
+.footerset{
+    color: white;
+    font-family:"Roboto", sans-serif ;
+    font-size: 12px;
+}
+@keyframes myAni{
+0%{background-color: red;}
+25%{background-color: blue;}
+50%{background-color: yellow;}
+100%{background-color: aquamarine;}
+}
+.anni{
+    animation-name: myAni;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes  moveRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(200px); }
+}
+.anni1{
+   animation: moveRight 2s ease-in-out infinite alternate;
+
+}
