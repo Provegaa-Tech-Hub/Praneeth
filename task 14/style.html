@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasks</title>
+</head>
+<body>
+
+<!-- Calculator -->
+<h3>Calculator</h3>
+<input id="num1" type="number">
+<input id="num2" type="number">
+
+<button onclick="calc('add')">Add</button>
+<button onclick="calc('sub')">Sub</button>
+<button onclick="calc('mul')">Mul</button>
+<button onclick="calc('div')">Div</button>
+<button onclick="calc('mod')">Mod</button>
+
+<p id="result"></p>
+
+<hr>
+
+<!-- Task 2 -->
+<h3>Add List</h3>
+<input id="listInput" type="text">
+<button onclick="addItem()">Add</button>
+<ul id="list"></ul>
+
+<hr>
+
+<!-- Task 3 -->
+<h3>Toggle Color</h3>
+<button onclick="toggleColor()">Toggle</button>
+<div id="box" style="width:100px;height:100px;border:1px solid;"></div>
+
+<hr>
+
+<!-- Task 4 -->
+<h3>Todo</h3>
+<input id="todoInput" type="text">
+<button onclick="addTodo()">Add</button>
+<ul id="todoList"></ul>
+
+<script src="style.js"></script>
+</body>
+</html>
