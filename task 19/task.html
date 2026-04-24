@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 1. OTP TIMER -->
+<h2>1. OTP Timer</h2>
+<p id="timer">30</p>
+<button id="startBtn" onclick="startTimer()">Start</button>
+<button id="resendBtn" disabled>Resend</button>
+
+<!-- 2. FORM VALIDATION -->
+<h2>2. Form Validation</h2>
+
+<input type="text" id="email" placeholder="Email">
+<p id="emailErr" class="error"></p>
+
+<input type="text" id="phone" placeholder="Phone">
+<p id="phoneErr" class="error"></p>
+
+<input type="password" id="password" placeholder="Password">
+<p id="passErr" class="error"></p>
+
+<!-- 3. EVENT TRACKER -->
+<h2>3. Event Tracker</h2>
+<button onclick="trackClick()">Click Me</button><br><br>
+
+<input type="text" id="inputBox" placeholder="Type here">
+<p id="eventResult"></p>
+
+<!-- 4. INVOICE GENERATOR -->
+<h2>4. Invoice Generator</h2>
+<input type="text" id="custName" placeholder="Customer Name">
+<button onclick="generateInvoice()">Generate</button>
+<p id="invoiceResult"></p>
+
+<script src="task.js"></script>
+</body>
+</html> 
