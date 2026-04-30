@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Lead Management System</title>
+</head>
+<body>
+
+<!-- ===== LEAD MANAGEMENT ===== -->
+<h2>Lead Management</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="email" placeholder="Enter Email">
+<button onclick="addLead()">Add Lead</button>
+
+<br><br>
+
+<input type="text" id="search" placeholder="Search Leads..." onkeyup="displayLeads()">
+
+<ul id="leadList"></ul>
+
+<hr>
+
+<!-- ===== TASK MANAGER ===== -->
+<h2>Task Manager</h2>
+
+<input type="text" id="taskInput" placeholder="Enter Task">
+<button onclick="addTask()">Add Task</button>
+
+<br><br>
+
+<button onclick="filterTasks('all')">All</button>
+<button onclick="filterTasks('completed')">Completed</button>
+<button onclick="filterTasks('pending')">Pending</button>
+
+<ul id="taskList"></ul>
+
+<script src="task.js"></script>
+</body>
+</html>
