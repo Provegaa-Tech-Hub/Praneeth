@@ -1,0 +1,46 @@
+/* Light Theme */
+.app.light {
+  background-color: #ffffff;
+  color: #000;
+  min-height: 100vh;
+}
+
+/* Dark Theme (Black Style) */
+.app.dark {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Button colors */
+.app.light .toggle-btn {
+  background: black;
+  color: white;
+}
+
+.app.dark .toggle-btn {
+  background: white;
+  color: black;
+}
+.app.light {
+  background: url("./assets/background\ img.png") no-repeat center center/cover;
+  color: #000;
+  min-height: 100vh;
+}
+.app.dark {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("./assets/background\ img.png") no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+}
