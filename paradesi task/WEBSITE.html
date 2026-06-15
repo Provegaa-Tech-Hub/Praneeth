@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradesi Solutions™</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- 1. CORE VARIABLES (DARK THEME) --- */
+        :root {
+            /* Palette: Dark Navy/Slate & Muted Gold */
+            --bg-main: #0f172a;
+            /* Deepest Navy (Background) */
+            --bg-card: #1e293b;
+            /* Lighter Slate (Cards/Sections) */
+            --bg-header: #ffffff;
+            /* Semi-transparent dark header */
+
+            --accent: #d4af37;
+            /* Metallic Gold */
+            --accent-hover: #0f38f1;
+
+            --text-heading: #f8fafc;
+            /* Almost White */
+            --text-body: #94a3b8;
+            /* Muted Silver/Grey */
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Manrope', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-body);
+            line-height: 1.7;
+            background-color: var(--bg-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- 2. TYPOGRAPHY --- */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            color: white;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+            /* Changed to inline-block for star positioning */
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-body);
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            opacity: 0.8;
+        }
+
+        /* --- 3. NAVIGATION (Dark Mode) --- */
+        header {
+            background: var(--bg-header);
+            border-bottom: 1px solid #41be5cd7;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 2px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #006B8F;
+            /* White text */
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            color: greenyellow;
+            opacity: 1;
+            border-bottom: 2px solid green;
+        }
+
+        .btn-header {
+            padding: 10px 20px;
+            background: transparent;
+            color: green !important;
+            border: 1px solid var(--accent);
+            border-radius: 2px;
+            opacity: 1;
+        }
+
+        .btn-header:hover {
+            background: white;
+            color: green !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-heading);
+        }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            /* Dark overlay over image */
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), var(--bg-main)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
+
+        .btn-hero {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: green;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-hero:hover {
+            background: #fff;
+            color: var(--bg-main);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- 5. ABOUT US --- */
+        .section-pad {
+            padding: 80px 10%;
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 20px 20px 0px rgba(30, 41, 59, 0.5);
+            /* Subtle shadow */
+            float: right;
+
+
+
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* --- 6. WE HIRE (Dark Cards + STARS ANIMATION) --- */
+        .we-hire {
+            background-color: #0b1120;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* STAR ANIMATION CSS */
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: glow-twinkle 2s infinite ease-in-out alternate;
+            opacity: 0;
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* Specific positions for stars near the title */
+        .star-1 {
+            top: 60px;
+            left: 35%;
+            animation-delay: 0s;
+            width: 15px;
+            height: 15px;
+        }
+
+        .star-2 {
+            top: 50px;
+            right: 35%;
+            animation-delay: 0.5s;
+            width: 25px;
+            height: 25px;
+        }
+
+        .star-3 {
+            top: 90px;
+            left: 40%;
+            animation-delay: 1s;
+            width: 10px;
+            height: 10px;
+        }
+
+        .star-4 {
+            top: 85px;
+            right: 38%;
+            animation-delay: 1.5s;
+            width: 12px;
+            height: 12px;
+        }
+
+        @keyframes glow-twinkle {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 1;
+                box-shadow: 0 0 20px var(--accent);
+            }
+        }
+
+        /* --- PROCESS CARDS --- */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-left: 4px solid #006b8f;;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* UPDATED: NUMBERS IN WHITE */
+        .process-num {
+            font-size: 3.5rem;
+            color: #ffffff;
+            /* PURE WHITE as requested */
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            opacity: 1;
+            /* Fully visible */
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .process-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #A6CE39;;
+        }
+
+        /* --- 7. SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #253249;
+            /* Slightly lighter on hover */
+        }
+
+        .icon-box {
+            font-size: 2rem;
+            color: #288112;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            padding-left: 20px;
+            list-style: square;
+            color: var(--text-body);
+            margin-top: 15px;
+        }
+
+        /* --- 8. OUR CLIENTS --- */
+        .clients {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .client-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .client-logo-placeholder {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .client-logo-placeholder:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* --- 9. CAREERS --- */
+        .careers {
+            background-color: var(--bg-main);
+            text-align: center;
+        }
+
+        .hiring-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-outline-dark {
+            padding: 15px 30px;
+            border: 1px solid var(--text-body);
+            color: var(--text-body);
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline-dark:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* --- 10. FOOTER / LETS TALK --- */
+        footer {
+            background: #020617;
+            /* Almost black */
+            color: #64748b;
+            padding: 80px 5% 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #64748b;
+            transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-card);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                display: none;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Hide decorative stars on mobile to save space */
+            .star {
+                display: none;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .services-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-btn {
+            width: 433px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+
+        .btn-yellow {
+            background: #A6CE39;
+            ;
+            color: #000;
+        }
+
+        .btn-blue {
+            background: #006B8F;
+            color: #fff;
+        }
+
+        /* Popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 9999;
+        }
+
+        .popup:target {
+            display: block;
+        }
+
+        .popup-box {
+            width: 450px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .popup-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+
+        .popup:target {
+            display: block;
+        }
+
+        .popup-box {
+            width: 450px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #000;
+        }
+
+        .opening-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .opening-btn {
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .current-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #ffffff;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid #ffffff;
+            transition: 0.3s;
+        }
+
+        .current-btn:hover {
+            background: #f3f4f6;
+        }
+
+        .popup-box h1,
+        .popup-box h2 {
+            color: #000;
+        }
+
+        .career-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .career-btn {
+            width: 260px;
+            text-align: center;
+            padding: 18px 20px;
+            background: #ffffff;
+            color: #008000;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .career-btn:hover {
+            background: #f5f5f5;
+        }
+
+        .career-btn {
+            background: #ffffff;
+            color: #008000;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+
+        .popup:target {
+            display: block;
+        }
+
+        .popup-box {
+            width: 450px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+        }
+
+        .job-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .job-btn {
+            background: #A6CE39;
+            ;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .job-buttons{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+}
+
+.job-buttons:target{
+    display:block;
+}
+
+.job-btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 40px;
+    background:#b7d632;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+
+
+
+.job-buttons{
+    display:none;
+    margin-top:15px;
+    justify-content:center;
+    gap:30px; /* Gap between buttons */
+}
+
+.job-btn{
+    display:inline-block;
+    padding:31px 100px;
+    margin:26 90px;
+    background:#256516;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.current-btn{
+    background:white;
+    color:#008000;
+    border:2px solid #006B8F;
+    padding:21px 30px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top: 15px;
+}
+.buttons-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.current-btn{
+    margin-bottom:30px; /* Gap between buttons */
+}
+
+.resume-btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#006B8F;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html" class="navbar-brand"><img src="images/Latest-Logo-TM.png" width="80%"
+                    alt="Logo"></a></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#hire">We Hire</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Our Clients</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact" class="btn-header">Let's Talk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Defining the Future of <br><em>Workforce & Management </em></h1>
+            <p>Paradesi Solutions Private Limited delivers precision-engineered IT solutions and strategic human capital
+                for the digital age.</p>
+            <p>We help organizations build strong teams, streamline HR operations, and manage payroll with confidence.
+                As a trusted HR Consultancy & Payroll Management partner, we deliver practical, compliant, and
+                people‑centric solutions tailored to your business needs.</p>
+            <a href="#contact" class="btn-hero">Reach Us</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-pad">
+        <div class="section-title">About Us</div>
+        <div class="section-subtitle">More than just a vendor. We are your strategic partner.
+            <p>People..... Process..... Performance.....</p>
+        </div>
+        </p>Paradesi Solutions is a professional HR services firm dedicated to supporting businesses across industries
+        with end‑to‑end human resource and payroll solutions. Our goal is simple: take the complexity out of HR so you
+        can focus on growing your business.</p>
+
+        <p>With deep domain expertise, up‑to‑date statutory knowledge, and a client‑first approach, we act as an
+            extension of your internal HR team—reliable, responsive, and results‑driven.</p>
+
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="images/About Us 1.jpg" alt="About Us">
+            </div>
+            <div class="about-text">
+                <h3>Our Mission & Vision</h3>
+                <p><strong>Paradesi Solutions Private Limited</strong> to empower organizations by delivering reliable,
+                    compliant, and people-focused HR consultancy and payroll management solutions that simplify
+                    operations, strengthen workforce performance, and enable sustainable business growth. We are
+                    committed to providing practical HR strategies, accurate payroll processing, and dependable
+                    compliance support—so our clients can focus on building successful teams and achieving their
+                    business goals..</p>
+                <p>To be a trusted and preferred HR Consultancy and Payroll Management partner, recognized for
+                    integrity, expertise, and excellence in service delivery.
+
+                    We envision a future where businesses of all sizes operate with confidence in their HR processes,
+                    supported by transparent systems, strong compliance practices, and employee-centric solutions.</p>
+                <p
+                    style="color: var(--accent); font-weight: 600; border-left: 3px solid var(--accent); padding-left: 15px;">
+                    "To mutually build a globally respected Human Capital Solutions & Payroll Management Company that
+                    adds tangible value to client organizations."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hire" class="section-pad We-Hire">
+        <div class="star-container">
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+            <div class="star star-4"></div>
+        </div>
+
+        <div class="section-title">We Hire For You</div>
+        <div class="section-subtitle">Our rigorous screening procedure ensures quality output within specific time
+            frames.</div>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-num">01</div>
+                <h4>Requirement Analysis</h4>
+                <p>We deeply understand your corporate culture, management style, and technical needs before starting.
+                </p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">02</div>
+                <h4>Sourcing & Screening</h4>
+                <p>Using our vast database and headhunting techniques to find the perfect fit, not just the first
+                    available.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">03</div>
+                <h4>Onboarding Support</h4>
+                <p>We assist in the final selection and onboarding process to ensure a smooth transition for the
+                    candidate.</p>
+            </div>
+        </div>
+        <br>
+        <div class="Hire">
+            <div class="about-image">
+
+
+                <img src="images/how-we-work.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+            </div>
+        </div>
+        </br>
+    </section>
+
+    <section id="services" class="section-pad">
+        <div class="section-title">Our Services</div>
+        <div class="section-subtitle">Customized solutions based on each client's individual needs.</div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box">✦</div>
+                <h3>HR/ Staffing Services</h3>
+                <p>IT & Non-IT Jobs, Contract to Hire, and Executive Search recruitment as per your requirements.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">★</div>
+                <h3>Payroll Management</h3>
+                <p>Administration of employee financial records, salaries, bonuses, and deductions, etc.,.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">✦</div>
+                <h3>Campus Drives</h3>
+                <p>It is conducted in a common place or within educational institutes to provide jobs to students
+                    pursuing or in the stage of completing the Programme/ Studies.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">✦</div>
+                <h3>Academic Projects</h3>
+                <p>We supports the students in their Mini & Major Projects in all Domains & Technologies for Graduates &
+                    Post Graduates of all the streams.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">★</div>
+                <h3>Internship</h3>
+                <p>It's more than just work; it's a learning-focused professional training period that provides industry
+                    exposure and networking, often leading to job offers. </p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box">✦</div>
+                <h3>Outsourcing Projects</h3>
+                <p>Outsourcing is a practice in which an individual or company performs tasks, provides services for
+                    other companies/Clients -- functions that could have been or are usually done in-house. Outsourcing
+                    is typically used by companies to save costs.</p>
+            </div>
+
+
+
+        </div> <!-- END OF SERVICES GRID -->
+        </a>
+        <div class="services-buttons">
+            <a href="#education-popup" class="service-btn btn-yellow">
+                ABROAD EDUCATION SUPPORT
+            </a>
+
+            <a href="#jobs-popup" class="service-btn btn-blue">
+                ABROAD JOB SUPPORT
+            </a>
+            <div id="education-popup" class="popup">
+                <div class="popup-box">
+                    <h1>THANK YOU FOR YOUR SUPPORT</h1>
+                    <h2>PLEASE SHARE YOUR DETAILS</h2>
+                    <a href="#service-buttons" class="close-btn">&times;</a>
+                </div>
+            </div>
+
+            <div id="jobs-popup" class="popup">
+                <div class="popup-box">
+                    <h1>THANK YOU FOR YOUR SUPPORT</h1>
+                    <h2>PLEASE SHARE YOUR DETAILS</h2>
+                    <a href="#service-buttons" class="close-btn">&times;</a>
+                </div>
+            </div>
+            
+
+
+
+
+
+       
+        </div>
+
+
+    </section>
+    </div>
+    </section>
+
+    <section id="clients" class="section-pad clients">
+        <div class="section-title">Our Clients</div>
+        <div class="section-subtitle">Trusted by leading businesses across the globe.</div>
+
+        <div class="client-grid">
+            <div class="about-image">
+                <img src="images/clients.png" style="filter: brightness(0.8) contrast(1.1);" alt="Meeting">
+            </div>
+    </section>
+
+    <section id="careers" class="section-pad careers">
+        <div class="section-title">Careers</div>
+        <div class="section-subtitle">Looking for your next challenge? Upload your resume today.</div>
+
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-body); opacity: 0.8;">
+            We recruit across various verticals for all corporations. Whether you are a fresher or experienced, we have
+            a place for you.
+        </p>
+
+        <div class="current-openings-section">
+
+    <button class="current-btn" onclick="toggleJobs()">
+        CURRENT OPENINGS
+    </button>
+
+    <div id="jobButtons" class="job-buttons">
+        <a href="technical-jobs.html" class="job-btn">IT</a>
+        <a href="nontechnical-jobs.html" class="job-btn">NON IT</a>
+    </div>
+
+</div>
+<script>
+function toggleJobs() {
+    var jobs = document.getElementById("jobButtons");
+
+if (jobs.style.display === "flex") {
+    jobs.style.display = "none";
+} else {
+    jobs.style.display = "flex";
+}
+    }
+
+</script>
+
+
+
+<a href="https://provegaa.com/" target="_blank" class="career-btn">
+    UPLOAD RESUME
+</a>
+
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;"><span>Paradesi Solutions</span></div>
+                <p>Excellence in every line of code, and every candidate placed.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Headquarters</h4>
+                <p>Kukatpally, Hyderabad</p>
+                <p>Telangana, India.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><strong>Phone:</strong> +91 9505583679</p>
+                <p><strong>Email:</strong> info@paradesisolutions.com</p>
+                <p><strong>Jobs:</strong> careers@paradesisolutions.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#careers">Careers</a></p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Design & Copyright © 2017-2026 @ <strong>P</strong>aradesi <strong>S</strong>olutions
+            <strong>P</strong>rivate <strong>L</strong>imited, <strong>Hyd</strong>erabad.</p>
+            All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            var nav = document.getElementById("navbar");
+            nav.classList.toggle("active");
+        }
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(item => {
+            item.addEventListener('click', () => {
+                var nav = document.getElementById("navbar");
+                nav.classList.remove("active");
+            })
+        })
+    </script>
+</body>
+
+</html>
