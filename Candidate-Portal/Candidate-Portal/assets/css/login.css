@@ -1,0 +1,396 @@
+/* =========================
+   Login Page
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:#f1f5f9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+/* Main Container */
+
+.login-container{
+
+    width:950px;
+
+    height:560px;
+
+    background:white;
+
+    display:flex;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* Left Image */
+
+.login-image{
+
+    width:50%;
+
+    background-image:url("../images/banners/login-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+}
+
+
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(37,99,235,0.8),
+        rgba(15,23,42,0.8)
+    );
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:45px;
+
+}
+
+
+
+.overlay h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.overlay p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* Login Box */
+
+.login-box{
+
+    width:50%;
+
+    padding:55px 45px;
+
+}
+
+
+
+.login-box h2{
+
+    font-size:32px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subtitle{
+
+    color:#64748b;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+/* Inputs */
+
+.input-box{
+
+    width:100%;
+
+    height:55px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.input-box i{
+
+    color:#2563eb;
+
+    margin-right:12px;
+
+}
+
+
+
+.input-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:100%;
+
+    font-size:15px;
+
+}
+
+
+
+#togglePassword{
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* Options */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.options a{
+
+    color:#2563eb;
+
+}
+
+
+
+
+/* Login Button */
+
+.login-box button{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.login-box button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+/* OR */
+
+.or{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    position:relative;
+
+}
+
+
+
+.or span{
+
+    background:white;
+
+    padding:0 15px;
+
+    color:#64748b;
+
+}
+
+
+
+.or:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:1px;
+
+    background:#cbd5e1;
+
+    top:50%;
+
+    left:0;
+
+    z-index:-1;
+
+}
+
+
+
+
+/* Google Button */
+
+.google-btn{
+
+    background:white !important;
+
+    color:#334155 !important;
+
+    border:1px solid #cbd5e1 !important;
+
+}
+
+
+
+.google-btn i{
+
+    color:#ea4335;
+
+    margin-right:10px;
+
+}
+
+
+
+
+.register-text{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#64748b;
+
+}
+
+
+
+.register-text a{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+
+.login-container{
+
+    width:90%;
+
+    height:auto;
+
+}
+
+
+
+.login-image{
+
+    display:none;
+
+}
+
+
+
+.login-box{
+
+    width:100%;
+
+    padding:40px 30px;
+
+}
+
+
+}

@@ -1,0 +1,293 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#f4f7fc;
+
+}
+
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+
+    height:75px;
+
+    background:#1E3A8A;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    color:#fff;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+.back-btn{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    background:#2563EB;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+
+/* ===========================
+   Main Section
+=========================== */
+
+.tenth-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:50px 20px;
+
+}
+
+.tenth-card{
+
+    width:720px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#DBEAFE;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.icon i{
+
+    font-size:42px;
+
+    color:#2563EB;
+
+}
+
+.tenth-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    color:#1E293B;
+
+}
+
+.tenth-card p{
+
+    text-align:center;
+
+    color:#64748B;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===========================
+   Form
+=========================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+}
+
+.input-group input,
+
+.input-group select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 10px rgba(37,99,235,.2);
+
+}
+
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:15px;
+
+}
+
+button:hover{
+
+    background:#1D4ED8;
+
+}
+
+button i{
+
+    margin-left:8px;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.header{
+
+    padding:15px;
+
+    flex-direction:column;
+
+    height:auto;
+
+    gap:15px;
+
+}
+
+.tenth-card{
+
+    width:100%;
+
+    padding:25px;
+
+}
+
+}

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Graduation Details | Career Portal</title>
+
+<link rel="stylesheet" href="../assets/css/graduation.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+Career<span>Portal</span>
+</div>
+
+
+<a href="education.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back
+
+</a>
+
+</header>
+
+
+
+
+
+<section class="graduation-container">
+
+
+<h1>
+Graduation Details
+</h1>
+
+
+<p>
+Select your degree and course details
+</p>
+
+
+
+
+
+<form id="graduationForm">
+
+
+
+
+
+<h2>
+Select Degree
+</h2>
+
+
+
+<div class="degree-box">
+
+
+
+<label>
+
+<input type="radio" 
+name="degree"
+value="B.Tech / B.E"
+onchange="showCourse('btech')">
+
+
+<div>
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>
+B.Tech / B.E
+</h3>
+
+</div>
+
+</label>
+
+
+
+
+
+<label>
+
+<input type="radio"
+name="degree"
+value="B.Sc"
+onchange="showCourse('bsc')">
+
+
+<div>
+
+<i class="fa-solid fa-flask"></i>
+
+<h3>
+B.Sc
+</h3>
+
+</div>
+
+</label>
+
+
+
+
+
+
+<label>
+
+<input type="radio"
+name="degree"
+value="B.Com"
+onchange="showCourse('bcom')">
+
+
+<div>
+
+<i class="fa-solid fa-calculator"></i>
+
+<h3>
+B.Com
+</h3>
+
+</div>
+
+</label>
+
+
+
+
+
+
+<label>
+
+<input type="radio"
+name="degree"
+value="BBA"
+onchange="showCourse('bba')">
+
+
+<div>
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+BBA
+</h3>
+
+</div>
+
+</label>
+
+
+
+
+
+
+<label>
+
+<input type="radio"
+name="degree"
+value="BCA"
+onchange="showCourse('bca')">
+
+
+<div>
+
+<i class="fa-solid fa-code"></i>
+
+<h3>
+BCA
+</h3>
+
+</div>
+
+</label>
+
+
+
+
+
+
+
+<label>
+
+<input type="radio"
+name="degree"
+value="B.Pharmacy"
+onchange="showCourse('pharmacy')">
+
+
+<div>
+
+<i class="fa-solid fa-pills"></i>
+
+<h3>
+B.Pharmacy
+</h3>
+
+</div>
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BTECH -->
+
+<div id="btech"
+class="branch-section">
+
+
+<h2>
+Select B.Tech Branch
+</h2>
+
+
+<div class="branch-box">
+
+
+<label>
+<input type="radio" name="branch" value="CSE">
+<div>CSE</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="IT">
+<div>IT</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="AI ML">
+<div>AI & ML</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="Data Science">
+<div>Data Science</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="ECE">
+<div>ECE</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="EEE">
+<div>EEE</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="Mechanical">
+<div>Mechanical</div>
+</label>
+
+
+<label>
+<input type="radio" name="branch" value="Civil">
+<div>Civil</div>
+</label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- BSC -->
+
+<div id="bsc"
+class="branch-section">
+
+
+<h2>
+Select B.Sc Course
+</h2>
+
+
+<div class="branch-box">
+
+
+<label><input type="radio" name="branch" value="Physics"><div>Physics</div></label>
+
+<label><input type="radio" name="branch" value="Chemistry"><div>Chemistry</div></label>
+
+<label><input type="radio" name="branch" value="Mathematics"><div>Mathematics</div></label>
+
+<label><input type="radio" name="branch" value="Computer Science"><div>Computer Science</div></label>
+
+<label><input type="radio" name="branch" value="Biotechnology"><div>Biotechnology</div></label>
+
+<label><input type="radio" name="branch" value="Statistics"><div>Statistics</div></label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- BCOM -->
+
+<div id="bcom"
+class="branch-section">
+
+
+<h2>
+Select B.Com Course
+</h2>
+
+
+<div class="branch-box">
+
+
+<label><input type="radio" name="branch" value="B.Com General"><div>B.Com General</div></label>
+
+<label><input type="radio" name="branch" value="B.Com Computers"><div>B.Com Computers</div></label>
+
+<label><input type="radio" name="branch" value="Accounting"><div>Accounting</div></label>
+
+<label><input type="radio" name="branch" value="Finance"><div>Finance</div></label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- BBA -->
+
+<div id="bba"
+class="branch-section">
+
+
+<h2>
+Select BBA Specialization
+</h2>
+
+
+<div class="branch-box">
+
+
+<label><input type="radio" name="branch" value="Marketing"><div>Marketing</div></label>
+
+<label><input type="radio" name="branch" value="Finance"><div>Finance</div></label>
+
+<label><input type="radio" name="branch" value="HR"><div>Human Resources</div></label>
+
+<label><input type="radio" name="branch" value="International Business"><div>International Business</div></label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- BCA -->
+
+<div id="bca"
+class="branch-section">
+
+
+<h2>
+Select BCA Course
+</h2>
+
+
+<div class="branch-box">
+
+
+<label><input type="radio" name="branch" value="Computer Applications"><div>Computer Applications</div></label>
+
+<label><input type="radio" name="branch" value="Data Science"><div>Data Science</div></label>
+
+<label><input type="radio" name="branch" value="AI ML"><div>AI & ML</div></label>
+
+<label><input type="radio" name="branch" value="Cyber Security"><div>Cyber Security</div></label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- PHARMACY -->
+
+<div id="pharmacy"
+class="branch-section">
+
+
+<h2>
+Select Pharmacy Course
+</h2>
+
+
+<div class="branch-box">
+
+
+<label><input type="radio" name="branch" value="Pharmaceutics"><div>Pharmaceutics</div></label>
+
+<label><input type="radio" name="branch" value="Pharmacology"><div>Pharmacology</div></label>
+
+<label><input type="radio" name="branch" value="Pharmaceutical Chemistry"><div>Pharmaceutical Chemistry</div></label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="details-card">
+
+
+<div class="input-group">
+
+<label>
+College Name
+</label>
+
+<input type="text"
+required>
+
+</div>
+
+
+
+
+<div class="input-group">
+
+<label>
+University Name
+</label>
+
+<input type="text"
+required>
+
+</div>
+
+
+
+
+<div class="input-group">
+
+<label>
+Passout Year
+</label>
+
+<input type="number"
+required>
+
+</div>
+
+
+
+
+<div class="input-group">
+
+<label>
+Percentage / CGPA
+</label>
+
+<input type="text"
+required>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<button type="submit">
+
+Save & Next
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+
+
+
+</form>
+
+
+</section>
+
+
+
+
+
+<script src="../assets/js/graduation.js"></script>
+
+
+
+<script>
+
+
+function showCourse(course){
+
+
+let sections=document.querySelectorAll(
+".branch-section"
+);
+
+
+sections.forEach(function(section){
+
+section.style.display="none";
+
+});
+
+
+
+document.getElementById(course)
+.style.display="block";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

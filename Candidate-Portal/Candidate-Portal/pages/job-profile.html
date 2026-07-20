@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Profile | Career Portal</title>
+
+    <link rel="stylesheet" href="../assets/css/job-profile.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        <h2>Career Portal</h2>
+
+    </div>
+
+    <a href="after-graduation.html" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </a>
+
+</header>
+
+
+<section class="job-container">
+
+    <h1>Job Profile Details</h1>
+
+    <p>Please enter your career preferences.</p>
+
+    <form id="jobForm">
+
+        <h2>Select Experience</h2>
+
+        <div class="experience-box">
+
+            <label>
+
+                <input type="radio"
+                       name="experience"
+                       value="Fresher">
+
+                <div>
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                    <h3>Fresher</h3>
+
+                </div>
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="experience"
+                       value="Experienced">
+
+                <div>
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <h3>Experienced</h3>
+
+                </div>
+
+            </label>
+
+        </div>
+
+        <div class="details-card">
+
+            <div class="input-group">
+
+                <label>Preferred Job Role</label>
+
+                <input
+                    type="text"
+                    id="jobRole"
+                    placeholder="Example: Software Developer">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Skills</label>
+
+                <input
+                    type="text"
+                    id="skills"
+                    placeholder="Java, Python, HTML, CSS">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Preferred Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Hyderabad">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Expected Salary</label>
+
+                <input
+                    type="text"
+                    id="salary"
+                    placeholder="5 LPA">
+
+            </div>
+
+        </div>
+
+        <!-- Experienced Details -->
+
+<div id="experienceDetails" class="details-card" style="display:none;">
+
+    <h2>Experience Details</h2>
+
+    <div class="input-group">
+
+        <label>Current Company</label>
+
+        <input type="text" id="currentCompany"
+            placeholder="Current Company Name">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Previous Company</label>
+
+        <input type="text" id="previousCompany"
+            placeholder="Previous Company Name">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Total Experience</label>
+
+        <input type="text" id="experienceYears"
+            placeholder="Example: 3 Years">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Current CTC</label>
+
+        <input type="text" id="currentCTC"
+            placeholder="Example: 6 LPA">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Expected CTC</label>
+
+        <input type="text" id="expectedCTC"
+            placeholder="Example: 8 LPA">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Notice Period</label>
+
+        <select id="noticePeriod">
+
+            <option value="">Select</option>
+
+            <option>Immediate</option>
+
+            <option>15 Days</option>
+
+            <option>30 Days</option>
+
+            <option>45 Days</option>
+
+            <option>60 Days</option>
+
+            <option>90 Days</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+        <button type="submit">
+
+            Save & Continue
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </form>
+
+</section>
+
+<script src="../assets/js/job-profile.js"></script>
+
+</body>
+</html>

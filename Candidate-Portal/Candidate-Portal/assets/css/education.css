@@ -1,0 +1,342 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+}
+
+
+
+/* =========================
+   Header
+========================= */
+
+
+.edu-header{
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 8%;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+
+.logo span{
+
+    color:#0f172a;
+
+}
+
+
+
+.back-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+
+.back-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+/* =========================
+ Education Container
+========================= */
+
+
+.education-container{
+
+    padding:60px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.education-container h1{
+
+    font-size:40px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.education-container>p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* =========================
+ Main Card
+========================= */
+
+
+.education-card{
+
+    margin:45px auto;
+
+    width:420px;
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.edu-icon{
+
+    width:80px;
+
+    height:80px;
+
+    background:#eff6ff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.edu-icon i{
+
+    font-size:40px;
+
+    color:#2563eb;
+
+}
+
+
+
+.education-card h2{
+
+    margin-bottom:15px;
+
+    color:#0f172a;
+
+}
+
+
+
+.education-card p{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.education-card button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.education-card button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+/* =========================
+ Timeline Steps
+========================= */
+
+
+.education-steps{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:50px;
+
+}
+
+
+
+.step{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+
+
+.step span{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#e2e8f0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    font-weight:700;
+
+    color:#475569;
+
+}
+
+
+
+.step.active span{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+.step p{
+
+    margin-top:10px;
+
+    color:#475569;
+
+}
+
+
+
+
+
+/* =========================
+ Responsive
+========================= */
+
+
+@media(max-width:600px){
+
+
+.education-card{
+
+    width:100%;
+
+}
+
+
+.education-steps{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+}
