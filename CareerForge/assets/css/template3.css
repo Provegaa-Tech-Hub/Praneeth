@@ -1,0 +1,947 @@
+/* ==========================================
+GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:#ECEFF3;
+
+    color:#1E293B;
+
+    padding:30px;
+
+}
+
+/* ==========================================
+RESUME
+========================================== */
+
+.resume{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    background:#FFFFFF;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.resume-header{
+
+    background:#0F172A;
+
+    color:#FFFFFF;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:40px;
+
+}
+
+/* ==========================================
+PROFILE PHOTO
+========================================== */
+
+.profile-photo img{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    border:6px solid #D4AF37;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================
+HEADER CONTENT
+========================================== */
+
+.header-content{
+
+    flex:1;
+
+}
+
+.header-content h1{
+
+    font-size:40px;
+
+    color:#FFFFFF;
+
+    margin-bottom:8px;
+
+}
+
+.header-content h3{
+
+    font-size:22px;
+
+    color:#D4AF37;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+.header-content p{
+
+    line-height:1.8;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+CONTACT BAR
+========================================== */
+
+.contact-bar{
+
+    background:#D4AF37;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    padding:18px;
+
+    color:#0F172A;
+
+    font-weight:600;
+
+}
+
+.contact-bar div{
+
+    margin:8px 15px;
+
+    font-size:15px;
+
+}
+
+.contact-bar i{
+
+    margin-right:8px;
+
+}
+
+/* ==========================================
+BODY
+========================================== */
+
+.resume-body{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+}
+
+/* ==========================================
+LEFT COLUMN
+========================================== */
+
+.left-column{
+
+    background:#F8FAFC;
+
+    padding:35px;
+
+    border-right:2px solid #E2E8F0;
+
+}
+
+/* ==========================================
+RIGHT COLUMN
+========================================== */
+
+.right-column{
+
+    padding:35px;
+
+}
+
+
+/* ==========================================
+RESUME SECTION
+========================================== */
+
+.resume-section{
+
+    margin-bottom:35px;
+
+}
+
+.resume-section h2{
+
+    color:#0F172A;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+    padding-bottom:10px;
+
+    border-bottom:3px solid #D4AF37;
+
+    display:inline-block;
+
+}
+
+.resume-section p{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:#475569;
+
+}
+
+/* ==========================================
+SKILL BOX
+========================================== */
+
+.skill-box{
+
+    background:#FFFFFF;
+
+    border-left:5px solid #D4AF37;
+
+    border-radius:8px;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.skill-box h4{
+
+    color:#0F172A;
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+}
+
+.skill-box p{
+
+    color:#475569;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+INFO TABLE
+========================================== */
+
+.info-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.info-table tr{
+
+    border-bottom:1px solid #E2E8F0;
+
+}
+
+.info-table td{
+
+    padding:12px 8px;
+
+    font-size:15px;
+
+}
+
+.info-table td:first-child{
+
+    width:180px;
+
+    font-weight:600;
+
+    color:#0F172A;
+
+}
+
+.info-table td:last-child{
+
+    color:#475569;
+
+}
+
+/* ==========================================
+EDUCATION TIMELINE
+========================================== */
+
+.timeline-item{
+
+    position:relative;
+
+    padding-left:35px;
+
+    margin-bottom:30px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:9px;
+
+    top:0;
+
+    bottom:-30px;
+
+    width:2px;
+
+    background:#D4AF37;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:0;
+
+    top:5px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    border:4px solid #FFFFFF;
+
+    box-shadow:0 0 0 2px #D4AF37;
+
+}
+
+.timeline-content{
+
+    background:#F8FAFC;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.timeline-content h3{
+
+    color:#0F172A;
+
+    margin-bottom:8px;
+
+}
+
+.timeline-content h4{
+
+    color:#D4AF37;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.timeline-content p{
+
+    margin-bottom:8px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+CARD BOX
+========================================== */
+
+.card-box{
+
+    background:#F8FAFC;
+
+    border-left:5px solid #D4AF37;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+.card-box p{
+
+    color:#475569;
+
+    line-height:1.9;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================================
+EXPERIENCE BOX
+========================================== */
+
+.experience-box{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-left:6px solid #D4AF37;
+
+    border-radius:10px;
+
+    padding:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.experience-box h3{
+
+    color:#0F172A;
+
+    margin-bottom:6px;
+
+}
+
+.experience-box h4{
+
+    color:#D4AF37;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+.experience-box p{
+
+    margin-bottom:8px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+SIGNATURE SECTION
+========================================== */
+
+.signature-section{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.signature-box{
+
+    text-align:center;
+
+    width:280px;
+
+}
+
+.signature-line{
+
+    width:220px;
+
+    height:2px;
+
+    background:#0F172A;
+
+    margin:20px auto 10px;
+
+}
+
+/* ==========================================
+ACTION BUTTONS
+========================================== */
+
+.resume-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+
+}
+
+.print-btn,
+.back-btn,
+.dashboard-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:220px;
+
+    height:52px;
+
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.print-btn{
+
+    background:#D4AF37;
+
+    color:#0F172A;
+
+}
+
+.print-btn:hover{
+
+    background:#C59A1D;
+
+    transform:translateY(-3px);
+
+}
+
+.back-btn{
+
+    background:#334155;
+
+    color:#FFFFFF;
+
+}
+
+.back-btn:hover{
+
+    background:#1E293B;
+
+    transform:translateY(-3px);
+
+}
+
+.dashboard-btn{
+
+    background:#16A34A;
+
+    color:#FFFFFF;
+
+}
+
+.dashboard-btn:hover{
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+HOVER EFFECTS
+========================================== */
+
+.skill-box,
+.timeline-content,
+.card-box,
+.experience-box{
+
+    transition:.3s;
+
+}
+
+.skill-box:hover,
+.timeline-content:hover,
+.card-box:hover,
+.experience-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#E2E8F0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C59A1D;
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .resume-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .resume-body{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .left-column{
+
+        border-right:none;
+
+        border-bottom:2px solid #E2E8F0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .resume-header{
+
+        padding:25px;
+
+    }
+
+    .header-content h1{
+
+        font-size:30px;
+
+    }
+
+    .header-content h3{
+
+        font-size:18px;
+
+    }
+
+    .right-column,
+    .left-column{
+
+        padding:25px;
+
+    }
+
+    .contact-bar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .info-table td{
+
+        display:block;
+
+        width:100%;
+
+    }
+
+    .info-table tr{
+
+        display:block;
+
+        margin-bottom:15px;
+
+    }
+
+    .resume-actions{
+
+        flex-direction:column;
+
+    }
+
+    .print-btn,
+    .back-btn,
+    .dashboard-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .profile-photo img{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    .header-content h1{
+
+        font-size:26px;
+
+    }
+
+    .resume-section h2{
+
+        font-size:20px;
+
+    }
+
+}
+
+/* ==========================================
+PRINT
+========================================== */
+
+@page{
+
+    size:A4;
+
+    margin:10mm;
+
+}
+
+@media print{
+
+    body{
+
+        background:#FFFFFF;
+
+        padding:0;
+
+    }
+
+    .resume{
+
+        box-shadow:none;
+
+        max-width:100%;
+
+        border-radius:0;
+
+    }
+
+    .resume-actions{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================
+HEADER LAYOUT
+========================================== */
+
+.resume-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+MOCK SCORECARD
+========================================== */
+
+.mock-card{
+
+    width:330px;
+
+    color:#fff;
+
+    margin-left:40px;
+
+}
+
+.mock-card h3{
+
+    color:#F4C430;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.mock-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+.mock-grid div{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.mock-grid span{
+
+    display:block;
+
+    color:#d5d5d5;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+
+}
+
+.mock-grid strong{
+
+    font-size:22px;
+
+    color:#F4C430;
+
+}
+
+.mock-status{
+
+    margin-top:18px;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+}
+
+.mock-status.failed{
+
+    background:#DC2626;
+
+}

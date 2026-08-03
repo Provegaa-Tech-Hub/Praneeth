@@ -1,0 +1,565 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+
+    background:#1E3A8A;
+
+    color:#fff;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo i{
+
+    font-size:28px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+.back-btn{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:#2563EB;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:#0F172A;
+
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.page-title{
+
+    text-align:center;
+
+    margin:40px 0;
+
+}
+
+.page-title h1{
+
+    color:#1E3A8A;
+
+    font-size:38px;
+
+}
+
+.page-title p{
+
+    color:#64748B;
+
+    margin-top:10px;
+
+}
+
+/* ===========================
+   Statistics
+=========================== */
+
+.stats{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card i{
+
+    font-size:38px;
+
+    color:#2563EB;
+
+    margin-bottom:15px;
+
+}
+
+.stat-card h2{
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+
+}
+
+.stat-card p{
+
+    color:#64748B;
+
+}
+
+/* ===========================
+   Search
+=========================== */
+
+.search-area{
+
+    width:90%;
+
+    margin:35px auto;
+
+    display:flex;
+
+}
+
+.search-area input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:8px 0 0 8px;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.search-area button{
+
+    width:70px;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    border-radius:0 8px 8px 0;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   Filters
+=========================== */
+
+.filters{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.filters button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#E2E8F0;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.filters button.active{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+.filters button:hover{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+/* ===========================
+   Application Cards
+=========================== */
+
+.applications-container{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.application-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.application-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.card-top h2{
+
+    color:#1E293B;
+
+}
+
+.card-top p{
+
+    color:#64748B;
+
+    margin-top:5px;
+
+}
+
+/* ===========================
+   Status
+=========================== */
+
+.status{
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.applied{
+
+    background:#2563EB;
+
+}
+
+.review{
+
+    background:#F59E0B;
+
+}
+
+.interview{
+
+    background:#9333EA;
+
+}
+
+.selected{
+
+    background:#16A34A;
+
+}
+
+.rejected{
+
+    background:#DC2626;
+
+}
+
+/* ===========================
+   Details
+=========================== */
+
+.job-details{
+
+    margin:20px 0;
+
+}
+
+.job-details p{
+
+    margin-bottom:10px;
+
+    color:#334155;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.view-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.print-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    background:#1E3A8A;
+
+}
+
+.print-btn:hover{
+
+    background:#15803D;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.applications-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+gap:15px;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+}
+
+.page-title h1{
+
+font-size:30px;
+
+}
+
+.search-area{
+
+flex-direction:column;
+
+}
+
+.search-area input{
+
+border-radius:8px;
+
+margin-bottom:10px;
+
+}
+
+.search-area button{
+
+width:100%;
+
+border-radius:8px;
+
+height:50px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.filters{
+
+justify-content:center;
+
+}
+}

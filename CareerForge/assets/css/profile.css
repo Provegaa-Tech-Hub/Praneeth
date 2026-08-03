@@ -1,0 +1,617 @@
+/* ======================================
+GLOBAL
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+
+body{
+
+    background:#f5f7fb;
+    color:#333;
+
+}
+
+
+
+/* ======================================
+SIDEBAR
+====================================== */
+
+.sidebar{
+
+    position:fixed;
+    width:260px;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    overflow-y:auto;
+
+}
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:35px;
+
+}
+
+
+.logo i{
+
+    font-size:30px;
+    color:#38bdf8;
+
+}
+
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+
+.sidebar li{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    margin-bottom:8px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+.sidebar li:hover,
+.sidebar .active{
+
+    background:#2563eb;
+
+}
+
+
+.sidebar li i{
+
+    width:22px;
+
+}
+
+
+
+
+
+/* ======================================
+MAIN CONTENT
+====================================== */
+
+
+.main-content{
+
+    margin-left:260px;
+    padding:30px;
+
+}
+
+
+
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+
+.page-header h1{
+
+    font-size:32px;
+    color:#0f172a;
+
+}
+
+
+.page-header p{
+
+    color:#64748b;
+
+}
+
+
+
+
+
+/* ======================================
+PROFILE CARD
+====================================== */
+
+
+.profile-card{
+
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+
+/* ======================================
+PROFILE IMAGE
+====================================== */
+
+
+.photo-section{
+
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+
+.photo-section img{
+
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #2563eb;
+
+}
+
+
+
+.change-photo{
+
+    display:block;
+    margin:15px auto;
+    background:#2563eb;
+    color:white;
+    width:170px;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+
+.change-photo:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+/* ======================================
+HEADINGS
+====================================== */
+
+
+.profile-form h2{
+
+    margin:25px 0;
+    color:#1e293b;
+    font-size:22px;
+
+}
+
+
+.profile-form h2 i{
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+/* ======================================
+FORM GRID
+====================================== */
+
+
+.form-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+
+
+.form-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+
+.form-group label{
+
+    font-weight:600;
+    margin-bottom:8px;
+
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+
+    padding:12px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+
+
+.form-group textarea{
+
+    resize:none;
+
+}
+
+
+
+.full-width{
+
+    grid-column:1/-1;
+
+}
+
+
+
+
+
+hr{
+
+    border:none;
+    border-top:1px solid #e2e8f0;
+    margin:30px 0;
+
+}
+
+
+
+
+
+/* ======================================
+AADHAAR & PAN BOXES
+====================================== */
+
+
+
+
+
+
+
+/* ======================================
+BUTTONS
+====================================== */
+
+
+.button-group{
+
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+    flex-wrap:wrap;
+
+}
+
+
+.button-group button,
+.cancel-btn{
+
+
+    padding:13px 22px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+}
+
+
+
+.save-btn{
+
+    background:#16a34a;
+    color:white;
+
+}
+
+
+.reset-btn{
+
+    background:#f59e0b;
+    color:white;
+
+}
+
+
+.cancel-btn{
+
+    background:#64748b;
+    color:white;
+
+}
+
+
+
+
+/* ======================================
+ALERT
+====================================== */
+
+
+.alert{
+
+    margin-top:20px;
+    padding:15px;
+    border-radius:10px;
+
+}
+
+
+.success{
+
+    background:#dcfce7;
+    color:#166534;
+
+}
+
+
+.error{
+
+    background:#fee2e2;
+    color:#991b1b;
+
+}
+
+
+
+
+
+/* ======================================
+PROFILE PROGRESS
+====================================== */
+
+
+.profile-progress-card{
+
+    margin-top:25px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+.progress-bar{
+
+    height:15px;
+
+    background:#e2e8f0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+.progress-fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:#2563eb;
+
+}
+
+
+
+
+/* ======================================
+SUMMARY
+====================================== */
+
+
+.profile-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+
+
+.summary-box{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+
+
+.summary-box h4{
+
+    margin-bottom:10px;
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+.profile-footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#64748b;
+
+}
+
+
+
+
+
+/* ======================================
+RESPONSIVE
+====================================== */
+
+
+@media(max-width:900px){
+
+
+.sidebar{
+
+    width:80px;
+
+}
+
+
+.sidebar span,
+.logo h2{
+
+    display:none;
+
+}
+
+
+.main-content{
+
+    margin-left:80px;
+
+}
+
+
+
+.form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.profile-summary{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+
+.aadhaar-boxes .aadhaar-input,
+.pan-boxes .pan-input{
+
+    width:28px !important;
+    height:32px !important;
+
+    padding:0 !important;
+
+    font-size:14px !important;
+
+    text-align:center;
+
+    border-radius:5px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:15px;
+
+}
+
+
+/* FIX AADHAAR PAN SMALL BOX SIZE */
+
+
+
+
+.small-box{
+
+    width:28px !important;
+    height:32px !important;
+
+    padding:0 !important;
+
+    text-align:center;
+
+    font-size:14px !important;
+
+}

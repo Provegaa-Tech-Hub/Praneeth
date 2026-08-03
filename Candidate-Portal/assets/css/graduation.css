@@ -1,0 +1,513 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+    background:#f8fafc;
+
+}
+
+
+
+
+/* =========================
+   Header
+========================= */
+
+.header{
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+
+.logo span{
+
+    color:#0f172a;
+
+}
+
+
+
+.back-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 25px;
+
+    border-radius:25px;
+
+    font-weight:600;
+
+}
+
+
+
+.back-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+/* =========================
+   Main Container
+========================= */
+
+.graduation-container{
+
+    padding:55px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.graduation-container h1{
+
+    font-size:40px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.graduation-container p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.graduation-container h2{
+
+    margin:30px 0 25px;
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+
+/* =========================
+   Degree Cards
+========================= */
+
+
+.degree-box{
+
+    max-width:950px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.degree-box label{
+
+    cursor:pointer;
+
+}
+
+
+
+.degree-box input{
+
+    display:none;
+
+}
+
+
+
+.degree-box label div{
+
+    background:white;
+
+    padding:30px 20px;
+
+    border-radius:18px;
+
+    border:3px solid transparent;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+    transition:.3s;
+
+}
+
+
+
+.degree-box label div:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.degree-box input:checked + div{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+}
+
+
+
+.degree-box i{
+
+    font-size:35px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.degree-box h3{
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+
+/* =========================
+   Course / Branch Sections
+========================= */
+
+
+.branch-section{
+
+    display:none;
+
+    margin-top:45px;
+
+}
+
+
+
+.branch-box{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.branch-box label{
+
+    cursor:pointer;
+
+}
+
+
+
+.branch-box input{
+
+    display:none;
+
+}
+
+
+
+.branch-box label div{
+
+
+    background:white;
+
+    padding:22px 15px;
+
+    border-radius:15px;
+
+    border:3px solid transparent;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    font-weight:600;
+
+    color:#334155;
+
+    transition:.3s;
+
+}
+
+
+
+.branch-box label div:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.branch-box input:checked + div{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+
+/* =========================
+   Details Card
+========================= */
+
+
+.details-card{
+
+    max-width:650px;
+
+    margin:45px auto 30px;
+
+    padding:35px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.input-group{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+
+
+.input-group input{
+
+
+    width:100%;
+
+    height:50px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+
+.input-group input:focus{
+
+    border-color:#2563eb;
+
+}
+
+
+
+
+
+
+/* =========================
+   Button
+========================= */
+
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 45px;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+
+@media(max-width:900px){
+
+
+.degree-box{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.branch-box{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.degree-box{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.branch-box{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.graduation-container h1{
+
+    font-size:30px;
+
+}
+
+
+
+.details-card{
+
+    padding:25px;
+
+}
+
+
+}

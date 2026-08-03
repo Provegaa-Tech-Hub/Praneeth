@@ -1,0 +1,465 @@
+/* ===================================
+   Google Font
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   Reset
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* ===================================
+   Header
+=================================== */
+
+.header{
+
+    background:#1E3A8A;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    color:#fff;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.header-right input{
+
+    width:300px;
+
+    padding:12px 15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.dashboard-btn{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:#2563EB;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.dashboard-btn:hover{
+
+    background:#0F172A;
+
+}
+
+/* ===================================
+   Title
+=================================== */
+
+.page-title{
+
+    text-align:center;
+
+    margin:40px 0;
+
+}
+
+.page-title h1{
+
+    font-size:38px;
+
+    color:#1E3A8A;
+
+}
+
+.page-title p{
+
+    color:#64748B;
+
+    margin-top:10px;
+
+}
+
+/* ===================================
+   Filters
+=================================== */
+
+.filters{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.filters button{
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    background:#E2E8F0;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.filters button:hover,
+.filters button.active{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+/* ===================================
+   Job Cards
+=================================== */
+
+.jobs-container{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.job-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===================================
+   Company
+=================================== */
+
+.company{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.company img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    padding:8px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.company h2{
+
+    font-size:22px;
+
+    color:#1E293B;
+
+}
+
+.company p{
+
+    color:#64748B;
+
+    margin-top:5px;
+
+}
+
+/* ===================================
+   Job Details
+=================================== */
+
+.details{
+
+    margin-bottom:25px;
+
+}
+
+.details p{
+
+    margin-bottom:12px;
+
+    color:#334155;
+
+    font-size:15px;
+
+}
+
+.details i{
+
+    color:#2563EB;
+
+    width:22px;
+
+}
+
+/* ===================================
+   Buttons
+=================================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.details-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    background:#E2E8F0;
+
+    color:#1E293B;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.details-btn:hover{
+
+    background:#CBD5E1;
+
+}
+
+.apply-btn{
+
+    flex:1;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.apply-btn:hover{
+
+    background:#15803D;
+
+}
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media(max-width:1100px){
+
+.jobs-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+gap:20px;
+
+}
+
+.header-right{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.header-right input{
+
+width:100%;
+
+}
+
+.dashboard-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.page-title h1{
+
+font-size:30px;
+
+}
+
+.jobs-container{
+
+grid-template-columns:1fr;
+
+}
+
+.company{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.filters{
+
+justify-content:center;
+
+}
+
+.filters button{
+
+width:100%;
+
+}
+
+}

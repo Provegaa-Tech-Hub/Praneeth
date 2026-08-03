@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Candidate Dashboard | Career Portal</title>
+
+    <link rel="stylesheet" href="../assets/css/candidate-dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>Career Portal</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </li>
+
+            <li onclick="location.href='profile.html'">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </li>
+
+            <li onclick="location.href='education.html'">
+                <i class="fa-solid fa-school"></i>
+                <span>Education</span>
+            </li>
+
+            <li onclick="location.href='experience.html'">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+            </li>
+
+            <li onclick="location.href='skills.html'">
+                <i class="fa-solid fa-code"></i>
+                <span>Skills</span>
+            </li>
+
+            <li onclick="location.href='upload-resume.html'">
+                <i class="fa-solid fa-file-arrow-up"></i>
+                <span>Resume</span>
+            </li>
+
+            <li onclick="location.href='job-profile.html'">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Job Preference</span>
+            </li>
+<li onclick="location.href='available-jobs.html'">
+
+    <i class="fa-solid fa-briefcase"></i>
+
+    <span>Available Jobs</span>
+
+</li>
+            <li onclick="location.href='applications.html'">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>Applications</span>
+            </li>
+
+            <li onclick="location.href='notifications.html'">
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+            </li>
+
+            <li onclick="location.href='settings.html'">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </li>
+
+            <li onclick="printProfile()">
+                <i class="fa-solid fa-print"></i>
+                <span>Print Profile</span>
+            </li>
+
+            <li onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>
+                    Welcome,
+                    <span id="candidateName">Candidate</span> 👋
+                </h1>
+
+                <p>
+                    Manage your education, skills and career journey.
+                </p>
+
+            </div>
+
+            <div class="profile-photo">
+
+                <img src="../assets/images/profile/default.png"
+                    alt="Profile">
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>100%</h2>
+
+                <p>Profile Completion</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h2 id="degree">-</h2>
+
+                <p>Highest Qualification</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h2 id="careerChoice">-</h2>
+
+                <p>Career Choice</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h2 id="location">-</h2>
+
+                <p>Preferred Location</p>
+
+            </div>
+
+        </section>
+
+        <!-- Candidate Summary -->
+
+        <section class="summary-box">
+
+            <h2>Candidate Summary</h2>
+
+            <table>
+
+                <tr>
+                    <td>Candidate Name</td>
+                    <td id="summaryName">-</td>
+                </tr>
+
+                <tr>
+                    <td>Email Address</td>
+                    <td id="summaryEmail">-</td>
+                </tr>
+
+                <tr>
+                    <td>Mobile Number</td>
+                    <td id="summaryMobile">-</td>
+                </tr>
+
+                <tr>
+                    <td>Highest Qualification</td>
+                    <td id="summaryDegree">-</td>
+                </tr>
+
+                <tr>
+                    <td>Career Choice</td>
+                    <td id="summaryCareer">-</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-grid">
+
+                <div class="action-card" onclick="location.href='profile.html'">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <h3>Profile</h3>
+
+                    <p>View & Update</p>
+
+                </div>
+
+                <div class="action-card" onclick="location.href='education.html'">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <h3>Education</h3>
+
+                    <p>Manage Details</p>
+
+                </div>
+
+                <div class="action-card" onclick="location.href='upload-resume.html'">
+
+                    <i class="fa-solid fa-file-arrow-up"></i>
+
+                    <h3>Resume</h3>
+
+                    <p>Upload Resume</p>
+
+                </div>
+
+                <div class="action-card" onclick="location.href='applications.html'">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <h3>Applications</h3>
+
+                    <p>Track Status</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Notifications -->
+
+        <section class="notifications">
+
+            <h2>Latest Notifications</h2>
+
+            <ul>
+
+                <li>🎉 Welcome to Career Portal.</li>
+
+                <li>📄 Complete your profile for better opportunities.</li>
+
+                <li>💼 New jobs matching your profile will appear here.</li>
+
+                <li>🔔 Interview updates will be shown here.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+
+            © 2026 Career Portal | All Rights Reserved.
+
+        </footer>
+
+    </main>
+
+    <script src="../assets/js/candidate-dashboard.js"></script>
+
+</body>
+
+</html>

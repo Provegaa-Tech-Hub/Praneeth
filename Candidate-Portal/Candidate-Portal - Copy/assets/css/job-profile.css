@@ -1,0 +1,400 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+}
+
+
+
+
+/* =========================
+ Header
+========================= */
+
+
+.header{
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+
+
+.logo span{
+
+    color:#0f172a;
+
+}
+
+
+
+.back-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 25px;
+
+    border-radius:25px;
+
+    font-weight:600;
+
+}
+
+
+.back-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+/* =========================
+ Container
+========================= */
+
+
+.job-container{
+
+    padding:55px 8%;
+
+    text-align:center;
+
+}
+
+
+
+
+.job-container h1{
+
+    font-size:40px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.job-container p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+.job-container h2{
+
+    color:#0f172a;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* =========================
+ Experience Cards
+========================= */
+
+
+.experience-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+
+.experience-box label{
+
+    cursor:pointer;
+
+}
+
+
+
+.experience-box input{
+
+    display:none;
+
+}
+
+
+
+.experience-box label div{
+
+    background:white;
+
+    padding:35px 20px;
+
+    border-radius:18px;
+
+    border:3px solid transparent;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+    transition:.3s;
+
+}
+
+
+
+
+.experience-box label div:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+.experience-box input:checked + div{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+}
+
+
+
+
+.experience-box i{
+
+    font-size:40px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.experience-box h3{
+
+    color:#0f172a;
+
+}
+
+
+
+
+
+/* =========================
+ Details Card
+========================= */
+
+
+.details-card{
+
+    max-width:650px;
+
+    margin:45px auto 30px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+
+.input-group{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+
+
+
+.input-group input{
+
+    width:100%;
+
+    height:50px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+
+
+.input-group input:focus{
+
+    border-color:#2563eb;
+
+}
+
+
+
+
+
+/* =========================
+ Button
+========================= */
+
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 45px;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+
+/* =========================
+ Responsive
+========================= */
+
+
+@media(max-width:700px){
+
+
+.experience-box{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.job-container h1{
+
+    font-size:30px;
+
+}
+
+
+
+.details-card{
+
+    padding:25px;
+
+}
+
+
+}

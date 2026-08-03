@@ -1,0 +1,617 @@
+/* ==========================
+   Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#f5f7fb;
+    display:flex;
+
+}
+
+/* ==========================
+   Sidebar
+========================== */
+
+.sidebar{
+
+    width:270px;
+    height:100vh;
+
+    background:linear-gradient(180deg,#0f172a,#1e3a8a);
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    overflow-y:auto;
+
+    color:#fff;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.logo i{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+    color:#38bdf8;
+
+}
+
+.logo h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:25px 0;
+
+}
+
+.sidebar ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+.sidebar ul li i{
+
+    width:28px;
+
+    font-size:18px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#2563eb;
+
+}
+
+.sidebar ul li.active{
+
+    background:#2563eb;
+
+    border-left:5px solid #38bdf8;
+
+}
+
+/* ==========================
+   Main Content
+========================== */
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+/* ==========================
+   Header
+========================== */
+
+.top-header{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.top-header h1{
+
+    color:#1e293b;
+
+    font-size:32px;
+
+}
+
+.top-header p{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+}
+
+.profile-photo img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #2563eb;
+
+}
+
+/* ==========================
+   Dashboard Cards
+========================== */
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+
+}
+
+.card i{
+
+    font-size:45px;
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+.card h2{
+
+    font-size:32px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+}
+
+/* ==========================
+   Candidate Summary
+========================== */
+
+.summary-box{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.summary-box h2{
+
+    color:#1e3a8a;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.summary-box table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.summary-box table tr{
+
+    transition:.3s;
+
+}
+
+.summary-box table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+.summary-box td{
+
+    padding:18px;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+.summary-box td:first-child{
+
+    width:35%;
+
+    font-weight:600;
+
+    color:#334155;
+
+    background:#f8fafc;
+
+}
+
+.summary-box td:last-child{
+
+    color:#475569;
+
+}
+
+/* ==========================
+   Quick Actions
+========================== */
+
+.quick-actions{
+
+    margin-top:40px;
+
+}
+
+.quick-actions h2{
+
+    font-size:28px;
+
+    color:#1e3a8a;
+
+    margin-bottom:25px;
+
+}
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.action-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.action-card:hover i{
+
+    color:#fff;
+
+}
+
+.action-card i{
+
+    font-size:45px;
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+.action-card h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.action-card p{
+
+    font-size:14px;
+
+    color:#64748b;
+
+}
+
+.action-card:hover p{
+
+    color:#fff;
+
+}
+
+/* ==========================
+   Notifications
+========================== */
+
+.notifications{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.notifications h2{
+
+    color:#1e3a8a;
+
+    margin-bottom:20px;
+
+}
+
+.notifications ul{
+
+    list-style:none;
+
+}
+
+.notifications li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #e2e8f0;
+
+    color:#475569;
+
+}
+
+.notifications li:last-child{
+
+    border:none;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    padding:20px;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:1200px){
+
+.dashboard-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.action-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+width:80px;
+
+}
+
+.logo h2{
+
+display:none;
+
+}
+
+.logo i{
+
+font-size:38px;
+
+}
+
+.sidebar ul li{
+
+justify-content:center;
+
+padding:18px 10px;
+
+}
+
+.sidebar ul li span{
+
+display:none;
+
+}
+
+.main-content{
+
+margin-left:80px;
+
+width:calc(100% - 80px);
+
+padding:20px;
+
+}
+
+.top-header{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:20px;
+
+}
+
+.dashboard-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.action-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.summary-box{
+
+overflow-x:auto;
+
+}
+
+.profile-photo img{
+
+width:70px;
+
+height:70px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.top-header h1{
+
+font-size:24px;
+
+}
+
+.summary-box h2{
+
+font-size:22px;
+
+}
+
+.quick-actions h2{
+
+font-size:22px;
+
+}
+
+}

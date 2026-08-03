@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review & Print | What Next After 10th</title>
+
+    <link rel="stylesheet" href="../assets/css/review.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            What Next <span>After 10th</span>
+        </div>
+
+        <a href="job-profile.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+        </a>
+
+    </header>
+
+    <section class="review-container">
+
+        <h1>Review Your Details</h1>
+
+        <p>Please verify all your information before printing.</p>
+
+        <!-- Personal Details -->
+
+        <div class="review-card">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Personal Details
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>Name</td>
+                    <td id="name"></td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td id="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Mobile</td>
+                    <td id="mobile"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- 10th -->
+
+        <div class="review-card">
+
+            <h2>
+                <i class="fa-solid fa-school"></i>
+                10th Class Details
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>School Name</td>
+                    <td id="school"></td>
+                </tr>
+
+                <tr>
+                    <td>Passout Year</td>
+                    <td id="schoolYear"></td>
+                </tr>
+
+                <tr>
+                    <td>Percentage / CGPA</td>
+                    <td id="schoolPercentage"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Intermediate -->
+
+        <div class="review-card">
+
+            <h2>
+                <i class="fa-solid fa-book-open"></i>
+                Intermediate / Diploma / ITI
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>Qualification</td>
+                    <td id="qualification"></td>
+                </tr>
+
+                <tr>
+                    <td>Course</td>
+                    <td id="course"></td>
+                </tr>
+
+                <tr>
+                    <td>College</td>
+                    <td id="college"></td>
+                </tr>
+
+                <tr>
+                    <td>Passout Year</td>
+                    <td id="interYear"></td>
+                </tr>
+
+                <tr>
+                    <td>Percentage</td>
+                    <td id="interPercentage"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Graduation -->
+
+        <div class="review-card">
+
+            <h2>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Graduation
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>Degree</td>
+                    <td id="degree"></td>
+                </tr>
+
+                <tr>
+                    <td>Branch</td>
+                    <td id="branch"></td>
+                </tr>
+
+                <tr>
+                    <td>College</td>
+                    <td id="gradCollege"></td>
+                </tr>
+
+                <tr>
+                    <td>University</td>
+                    <td id="university"></td>
+                </tr>
+
+                <tr>
+                    <td>Passout Year</td>
+                    <td id="gradYear"></td>
+                </tr>
+
+                <tr>
+                    <td>Percentage</td>
+                    <td id="gradPercentage"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Career -->
+
+        <div class="review-card">
+
+            <h2>
+                <i class="fa-solid fa-briefcase"></i>
+                Career Details
+            </h2>
+
+            <table>
+
+                <tr>
+                    <td>Career Choice</td>
+                    <td id="career"></td>
+                </tr>
+
+                <tr>
+                    <td>Experience</td>
+                    <td id="experience"></td>
+                </tr>
+
+                <tr>
+                    <td>Job Role</td>
+                    <td id="jobRole"></td>
+                </tr>
+
+                <tr>
+                    <td>Skills</td>
+                    <td id="skills"></td>
+                </tr>
+
+                <tr>
+                    <td>Preferred Location</td>
+                    <td id="location"></td>
+                </tr>
+
+                <tr>
+                    <td>Expected Salary</td>
+                    <td id="salary"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="button-group">
+
+            <button type="button" onclick="history.back()">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button type="button" onclick="window.print()">
+                <i class="fa-solid fa-print"></i>
+                Print
+            </button>
+
+            <button type="button" id="finishBtn">
+                <i class="fa-solid fa-check"></i>
+                Finish
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="../assets/js/review.js"></script>
+
+</body>
+
+</html>

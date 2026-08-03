@@ -1,0 +1,612 @@
+/* ==========================================
+CareerForge Exam Page
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#F4F7FC;
+
+    color:#1E293B;
+
+}
+
+.exam-container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:40px auto;
+
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.exam-header{
+
+    background:#ffffff;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+}
+
+.exam-header h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+    margin-bottom:8px;
+
+}
+
+.exam-header p{
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+.timer{
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+    padding:15px 25px;
+
+    border-radius:14px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    min-width:170px;
+
+    justify-content:center;
+
+}
+
+.timer i{
+
+    font-size:22px;
+
+}
+
+/* ==========================================
+PROGRESS BAR
+========================================== */
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#E2E8F0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:30px;
+
+}
+
+.progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:#2563EB;
+
+    transition:.4s;
+
+}
+
+/* ==========================================
+QUESTION CARD
+========================================== */
+
+.question-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+}
+
+.question-number{
+
+    display:inline-block;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+QUESTION
+========================================== */
+
+.question-title{
+
+    font-size:24px;
+
+    color:#1E293B;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+OPTIONS
+========================================== */
+
+.options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 20px;
+
+    border:2px solid #E2E8F0;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.option:hover{
+
+    border-color:#2563EB;
+
+    background:#EFF6FF;
+
+}
+
+.option input[type="radio"]{
+
+    width:22px;
+
+    height:22px;
+
+    accent-color:#2563EB;
+
+    cursor:pointer;
+
+}
+
+.option span{
+
+    font-size:17px;
+
+    color:#334155;
+
+    line-height:1.6;
+
+    flex:1;
+
+}
+
+.option input[type="radio"]:checked + span{
+
+    color:#2563EB;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+EXAM NAVIGATION
+========================================== */
+
+.exam-navigation{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+.prev-btn,
+.next-btn,
+.submit-btn{
+
+    border:none;
+
+    outline:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.prev-btn{
+
+    background:#E2E8F0;
+
+    color:#1E293B;
+
+}
+
+.prev-btn:hover{
+
+    background:#CBD5E1;
+
+}
+
+.next-btn{
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+}
+
+.next-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.30);
+
+}
+
+.submit-btn{
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+}
+
+.submit-btn:hover{
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(22,163,74,.30);
+
+}
+
+.prev-btn i,
+.next-btn i,
+.submit-btn i{
+
+    margin:0 8px;
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+.exam-footer{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding:20px;
+
+    color:#64748B;
+
+    border-top:1px solid #E2E8F0;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================
+RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 992px){
+
+    .exam-container{
+
+        width:95%;
+
+    }
+
+    .exam-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .timer{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .exam-header{
+
+        padding:20px;
+
+    }
+
+    .exam-header h1{
+
+        font-size:24px;
+
+    }
+
+    .timer{
+
+        font-size:20px;
+
+        padding:14px 20px;
+
+    }
+
+    .question-card{
+
+        padding:25px;
+
+    }
+
+    .question-title{
+
+        font-size:20px;
+
+    }
+
+    .option{
+
+        padding:15px;
+
+    }
+
+    .option span{
+
+        font-size:15px;
+
+    }
+
+    .exam-navigation{
+
+        flex-direction:column;
+
+    }
+
+    .prev-btn,
+
+    .next-btn,
+
+    .submit-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .exam-header h1{
+
+        font-size:20px;
+
+    }
+
+    .timer{
+
+        font-size:18px;
+
+    }
+
+    .question-title{
+
+        font-size:18px;
+
+    }
+
+    .question-number{
+
+        font-size:13px;
+
+    }
+
+    .option{
+
+        gap:10px;
+
+    }
+
+    .option input[type="radio"]{
+
+        width:18px;
+
+        height:18px;
+
+    }
+
+}
+
+/* ==========================================
+SELECTED OPTION
+========================================== */
+
+.option:has(input[type="radio"]:checked){
+
+    border-color:#2563EB;
+
+    background:#EFF6FF;
+
+}
+
+/* ==========================================
+FADE ANIMATION
+========================================== */
+
+.question-card{
+
+    animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+BACK TO DASHBOARD BUTTON
+========================================== */
+
+.back-dashboard{
+
+    margin:20px 0;
+
+}
+
+.dashboard-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.dashboard-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}

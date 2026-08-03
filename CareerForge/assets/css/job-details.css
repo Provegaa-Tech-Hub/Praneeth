@@ -1,0 +1,474 @@
+/* ==========================================
+CareerForge
+Job Details
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:#F1F5F9;
+color:#1E293B;
+
+}
+
+.container{
+
+width:95%;
+max-width:1200px;
+margin:40px auto;
+
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.job-header{
+
+background:#fff;
+padding:35px;
+border-radius:18px;
+display:flex;
+align-items:center;
+gap:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin-bottom:35px;
+
+}
+
+.job-header img{
+
+width:110px;
+height:110px;
+object-fit:contain;
+border-radius:15px;
+padding:10px;
+background:#F8FAFC;
+border:2px solid #E2E8F0;
+
+}
+
+.job-header h1{
+
+font-size:34px;
+margin-bottom:10px;
+color:#1E293B;
+
+}
+
+.job-header h3{
+
+font-size:22px;
+font-weight:500;
+color:#64748B;
+
+}
+
+/* ==========================================
+INFO GRID
+========================================== */
+
+.job-info-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:35px;
+
+}
+
+.info-box{
+
+background:#fff;
+padding:22px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.info-box:hover{
+
+transform:translateY(-6px);
+
+}
+
+.info-box i{
+
+font-size:30px;
+color:#2563EB;
+margin-bottom:12px;
+
+}
+
+.info-box h4{
+
+font-size:16px;
+margin-bottom:10px;
+color:#1E293B;
+
+}
+
+.info-box p{
+
+font-size:15px;
+color:#64748B;
+
+}
+
+/* ==========================================
+CONTENT CARDS
+========================================== */
+
+.content-card{
+
+background:#fff;
+padding:30px;
+border-radius:18px;
+margin-bottom:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.content-card h2{
+
+display:flex;
+align-items:center;
+gap:12px;
+font-size:24px;
+margin-bottom:20px;
+color:#1E293B;
+padding-bottom:12px;
+border-bottom:2px solid #E2E8F0;
+
+}
+
+.content-card h2 i{
+
+color:#2563EB;
+font-size:26px;
+
+}
+
+.content-card p{
+
+font-size:16px;
+line-height:1.9;
+color:#475569;
+text-align:justify;
+
+}
+
+/* ==========================================
+ACTION BUTTONS
+========================================== */
+
+.action-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+margin:40px 0;
+
+}
+
+.action-buttons a{
+
+text-decoration:none;
+padding:15px 35px;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+/* ==========================================
+APPLY BUTTON
+========================================== */
+
+.apply-btn{
+
+background:#10B981;
+color:#fff;
+
+}
+
+.apply-btn:hover{
+
+background:#059669;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(16,185,129,.30);
+
+}
+
+/* ==========================================
+BACK BUTTON
+========================================== */
+
+.back-btn{
+
+background:#2563EB;
+color:#fff;
+
+}
+
+.back-btn:hover{
+
+background:#1D4ED8;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(37,99,235,.30);
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+.page-footer{
+
+background:#fff;
+padding:20px;
+border-radius:15px;
+text-align:center;
+margin-top:40px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.page-footer p{
+
+font-size:15px;
+color:#64748B;
+
+}
+
+/* ==========================================
+RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:1200px){
+
+.job-info-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:992px){
+
+.container{
+
+width:95%;
+margin:20px auto;
+
+}
+
+.job-header{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.job-header img{
+
+width:100px;
+height:100px;
+
+}
+
+.job-header h1{
+
+font-size:30px;
+
+}
+
+.job-header h3{
+
+font-size:20px;
+
+}
+
+.action-buttons{
+
+flex-direction:column;
+
+}
+
+.action-buttons a{
+
+justify-content:center;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.job-info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.content-card{
+
+padding:22px;
+
+}
+
+.content-card h2{
+
+font-size:22px;
+
+}
+
+.content-card p{
+
+font-size:15px;
+line-height:1.8;
+
+}
+
+.job-header{
+
+padding:25px;
+
+}
+
+.job-header h1{
+
+font-size:26px;
+
+}
+
+.job-header h3{
+
+font-size:18px;
+
+}
+
+.info-box{
+
+padding:18px;
+
+}
+
+.info-box i{
+
+font-size:26px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.container{
+
+width:95%;
+
+}
+
+.job-header{
+
+gap:18px;
+
+}
+
+.job-header img{
+
+width:80px;
+height:80px;
+
+}
+
+.job-header h1{
+
+font-size:22px;
+
+}
+
+.job-header h3{
+
+font-size:16px;
+
+}
+
+.content-card{
+
+padding:18px;
+
+}
+
+.content-card h2{
+
+font-size:20px;
+
+}
+
+.action-buttons a{
+
+width:100%;
+padding:14px;
+
+}
+
+.page-footer{
+
+padding:16px;
+
+}
+
+.page-footer p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+SMOOTH ANIMATION
+========================================== */
+
+.job-header,
+.info-box,
+.content-card,
+.action-buttons,
+.page-footer{
+
+animation:fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}

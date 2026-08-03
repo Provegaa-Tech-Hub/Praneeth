@@ -1,0 +1,623 @@
+/* ==========================================
+   CareerForge Mock Exams
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F4F7FC;
+    color:#1E293B;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+/* ==========================================
+HEADER
+========================================== */
+
+.page-header{
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+}
+
+.header-left h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#1E293B;
+
+}
+
+.header-left h1 i{
+
+    color:#2563EB;
+
+    margin-right:10px;
+
+}
+
+.header-left p{
+
+    margin-top:10px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.header-right img{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #2563EB;
+
+}
+
+.header-right h3{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+    color:#1E293B;
+
+}
+
+.header-right p{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+/* ==========================================
+EXAMS GRID
+========================================== */
+
+.exam-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==========================================
+EXAM CARD
+========================================== */
+
+.exam-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border:1px solid #E2E8F0;
+
+    transition:.35s;
+
+}
+
+.exam-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+EXAM ICON
+========================================== */
+
+.exam-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+EXAM CONTENT
+========================================== */
+
+.exam-content h2{
+
+    font-size:24px;
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+EXAM DETAILS
+========================================== */
+
+.exam-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    margin:20px 0;
+
+}
+
+.detail-item{
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:14px;
+
+    color:#334155;
+
+}
+
+.detail-item i{
+
+    color:#2563EB;
+
+    width:18px;
+
+}
+
+/* ==========================================
+DESCRIPTION
+========================================== */
+
+.exam-description{
+
+    margin-top:15px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    min-height:70px;
+
+}
+/* ==========================================
+EXAM FOOTER
+========================================== */
+
+.exam-footer{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+.start-btn,
+.result-btn{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.start-btn{
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+}
+
+.start-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.30);
+
+}
+
+.result-btn{
+
+    background:#F8FAFC;
+
+    color:#334155;
+
+    border:1px solid #CBD5E1;
+
+}
+
+.result-btn:hover{
+
+    background:#334155;
+
+    color:#ffffff;
+
+}
+
+.start-btn i,
+.result-btn i{
+
+    margin-right:8px;
+
+}
+
+/* ==========================================
+NO EXAMS
+========================================== */
+
+.no-exams{
+
+    grid-column:1/-1;
+
+    background:#ffffff;
+
+    padding:80px 30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.no-exams i{
+
+    font-size:70px;
+
+    color:#94A3B8;
+
+    margin-bottom:20px;
+
+}
+
+.no-exams h2{
+
+    font-size:30px;
+
+    color:#1E293B;
+
+    margin-bottom:12px;
+
+}
+
+.no-exams p{
+
+    color:#64748B;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+.page-footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    font-size:15px;
+
+    border-top:1px solid #E2E8F0;
+
+}
+
+
+/* ==========================================
+RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 992px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .header-right{
+
+        width:100%;
+
+    }
+
+    .exam-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .container{
+
+        width:95%;
+
+        margin:20px auto;
+
+    }
+
+    .page-header{
+
+        padding:20px;
+
+    }
+
+    .header-left h1{
+
+        font-size:28px;
+
+    }
+
+    .header-right{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .header-right img{
+
+        width:65px;
+
+        height:65px;
+
+    }
+
+    .exam-card{
+
+        padding:20px;
+
+    }
+
+    .exam-content h2{
+
+        font-size:20px;
+
+    }
+
+    .exam-details{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .exam-footer{
+
+        flex-direction:column;
+
+    }
+
+    .start-btn,
+
+    .result-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .header-left h1{
+
+        font-size:24px;
+
+    }
+
+    .header-left p{
+
+        font-size:14px;
+
+    }
+
+    .exam-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+    .exam-content h2{
+
+        font-size:18px;
+
+    }
+
+    .detail-item{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+SMOOTH ANIMATIONS
+========================================== */
+
+.exam-card{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.result-btn.disabled{
+
+    background:#bdbdbd;
+
+    cursor:not-allowed;
+
+    pointer-events:auto;
+
+    opacity:.7;
+
+}
+
+

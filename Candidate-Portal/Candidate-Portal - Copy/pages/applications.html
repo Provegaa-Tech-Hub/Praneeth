@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications | Career Portal</title>
+
+    <link rel="stylesheet" href="../assets/css/applications.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        <h2>Career Portal</h2>
+
+    </div>
+
+    <a href="candidate-dashboard.html" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Dashboard
+
+    </a>
+
+</header>
+
+
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="page-title">
+
+    <h1>My Applications</h1>
+
+    <p>
+        Track all your job applications in one place.
+    </p>
+
+</section>
+
+
+
+<!-- ================= DASHBOARD CARDS ================= -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-file-circle-check"></i>
+
+        <h2 id="totalApplications">0</h2>
+
+        <p>Total Applications</p>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        <h2 id="appliedApplications">0</h2>
+
+        <p>Applied</p>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <h2 id="reviewApplications">0</h2>
+
+        <p>Under Review</p>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-user-check"></i>
+
+        <h2 id="interviewApplications">0</h2>
+
+        <p>Interview</p>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <h2 id="selectedApplications">0</h2>
+
+        <p>Selected</p>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-circle-xmark"></i>
+
+        <h2 id="rejectedApplications">0</h2>
+
+        <p>Rejected</p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-area">
+
+    <input
+
+        type="text"
+
+        id="searchJob"
+
+        placeholder="Search by Job Role, Company or Location">
+
+</section>
+
+
+
+<!-- ================= FILTER ================= -->
+
+<section class="filters">
+
+    <button class="active">
+
+        All
+
+    </button>
+
+    <button>
+
+        Applied
+
+    </button>
+
+    <button>
+
+        Review
+
+    </button>
+
+    <button>
+
+        Interview
+
+    </button>
+
+    <button>
+
+        Selected
+
+    </button>
+
+    <button>
+
+        Rejected
+
+    </button>
+
+</section>
+
+<!-- ================= APPLICATIONS ================= -->
+
+<section
+class="applications-container"
+id="applicationsContainer">
+
+    <!-- Applications will be loaded automatically
+         from applications.js -->
+
+</section>
+
+
+
+<!-- ================= EMPTY STATE ================= -->
+
+<div
+class="empty-box"
+id="emptyBox"
+style="display:none;">
+
+    <i class="fa-solid fa-folder-open"></i>
+
+    <h2>
+        No Applications Found
+    </h2>
+
+    <p>
+
+        You haven't applied for any jobs yet.
+
+    </p>
+
+    <a
+    href="available-jobs.html"
+    class="apply-job-btn">
+
+        Apply Jobs
+
+    </a>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 Career Portal |
+
+        My Applications Dashboard
+
+    </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../assets/js/applications.js"></script>
+
+</body>
+
+</html>
