@@ -1,0 +1,966 @@
+/* =========================================
+   HERITAGE SECTION & GRID LAYOUT
+   ========================================= */
+
+.heritage-strip {
+  padding: 45px 0;
+  background-color: var(--cream, #fdfbf7);
+}
+
+.heritage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  /* IMPORTANT:
+     Both image and text start at the same top */
+  align-items: start;
+}
+
+
+/* =========================================
+   HERITAGE IMAGE & BADGE
+   ========================================= */
+
+.heritage-image-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.heritage-image-wrap img {
+  display: block;
+
+  height: 370px;
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: sepia(0.15);
+
+  border-radius: 5px 100px 5px 100px;
+}
+
+.image-badge {
+  position: absolute;
+
+  bottom: -14px;
+  left: 16px;
+
+  margin-left: 168px;
+
+  background: var(--navy, #1a2b4c);
+
+  color: #ffffff;
+
+  padding: 10px 16px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   HERITAGE TEXT AREA
+   ========================================= */
+
+.heritage-copy {
+  min-width: 0;
+  width: 100%;
+
+  text-align: left;
+
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+/* =========================================
+   KICKER
+   ========================================= */
+
+.heritage-copy .kicker {
+  display: block;
+
+  margin: 0 0 8px 0;
+
+  color: var(--teal, #0097a7);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   TITLE + MEMORIES
+   ========================================= */
+
+.heritage-title {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  width: 100%;
+
+  margin: 0 0 18px 0;
+}
+
+
+/* =========================================
+   MAIN TITLE
+   ========================================= */
+
+.heritage-main-title {
+  display: block;
+
+  margin: 0;
+
+  color: var(--navy, #1a2b4c);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(32px, 3.2vw, 48px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   VERTICAL MEMORIES
+   ========================================= */
+
+.memories-vertical {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  flex-shrink: 0;
+
+  margin-top: 25px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(24px, 2.6vw, 38px);
+
+  font-style: italic;
+
+  font-weight: 700;
+
+  line-height: 0.93;
+
+  user-select: none;
+}
+
+.memories-vertical span {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   MEMORIES COLORS
+   ========================================= */
+
+.memories-vertical span:nth-child(1) {
+  color: #6b2b9f;
+}
+
+.memories-vertical span:nth-child(2) {
+  color: #0097a7;
+}
+
+.memories-vertical span:nth-child(3) {
+  color: #73b82a;
+}
+
+.memories-vertical span:nth-child(4) {
+  color: #df217d;
+}
+
+.memories-vertical span:nth-child(5) {
+  color: #f28c28;
+}
+
+.memories-vertical span:nth-child(6) {
+  color: #123f91;
+}
+
+.memories-vertical span:nth-child(7) {
+  color: #00a7a7;
+}
+
+.memories-vertical span:nth-child(8) {
+  color: #6b2b9f;
+}
+
+.memories-vertical span:nth-child(9) {
+  color: #df217d;
+}
+
+
+/* =========================================
+   BODY PARAGRAPH
+   ========================================= */
+
+.heritage-copy > p {
+  display: block;
+
+  width: 100%;
+  max-width: 503px;
+
+  margin: -195px 0 30px 0;
+
+  color: var(--muted, #666666);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   HERITAGE POINTS GRID
+   ========================================= */
+
+.heritage-points {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(180px, 1fr));
+
+  column-gap: 40px;
+
+  row-gap: 16px;
+
+  max-width: 530px;
+}
+
+.heritage-points > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--navy, #1a2b4c);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.heritage-points > div > span {
+  color: var(--green, #73b82a);
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  .heritage-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .heritage-main-title {
+    font-size: 36px;
+  }
+
+  .memories-vertical {
+    font-size: 30px;
+  }
+
+  .heritage-copy {
+    margin-top: 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .heritage-strip {
+    padding: 50px 0;
+
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     MAIN MOBILE GRID
+     ----------------------------------------- */
+
+  .heritage-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     HERITAGE IMAGE
+     ----------------------------------------- */
+
+  .heritage-image-wrap {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+  }
+
+  .heritage-image-wrap img {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 320px;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     BADGE
+     ----------------------------------------- */
+
+  .image-badge {
+    left: 50%;
+
+    margin-left: 0;
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+  }
+
+
+  /* -----------------------------------------
+     TEXT AREA
+     ----------------------------------------- */
+
+  .heritage-copy {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    margin-top: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     KICKER
+     ----------------------------------------- */
+
+  .heritage-copy .kicker {
+    margin-bottom: 8px;
+  }
+
+
+  /* -----------------------------------------
+     TITLE + MEMORIES
+     ----------------------------------------- */
+
+  .heritage-title {
+    width: 100%;
+
+    min-width: 0;
+
+    gap: 10px;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     MAIN TITLE
+     ----------------------------------------- */
+
+  .heritage-main-title {
+    font-size: 26px;
+
+    white-space: normal;
+
+    min-width: 0;
+
+    max-width: calc(100% - 50px);
+
+    word-break: normal;
+
+    overflow-wrap: normal;
+  }
+
+
+  /* -----------------------------------------
+     MEMORIES
+     ----------------------------------------- */
+
+  .memories-vertical {
+    font-size: 22px;
+
+    margin-top: 15px;
+
+    flex-shrink: 0;
+
+    line-height: 0.93;
+  }
+
+
+  /* -----------------------------------------
+     BODY PARAGRAPH
+     ----------------------------------------- */
+
+  .heritage-copy > p {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 0 30px 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     POINTS
+     ----------------------------------------- */
+
+  .heritage-points {
+    width: 100%;
+
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+
+    column-gap: 0;
+
+    row-gap: 16px;
+
+    box-sizing: border-box;
+  }
+
+  .heritage-points > div {
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+
+  /* -----------------------------------------
+     HERITAGE TREE
+     ----------------------------------------- */
+
+  .heritage-tree-wrap {
+    width: 100%;
+
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+  .heritage-tree-image {
+    width: 100%;
+
+    max-width: 560px;
+
+    height: auto;
+
+    display: block;
+  }
+
+
+  /* -----------------------------------------
+     FAMILY SLOGAN IMAGE
+     ----------------------------------------- */
+
+  .family-slogan-image {
+    width: 100%;
+
+    max-width: 480px;
+
+    height: auto;
+
+    display: block;
+
+    margin-top: -5px;
+
+    object-fit: contain;
+  }
+
+
+  /* -----------------------------------------
+     BUTTON
+     ----------------------------------------- */
+
+  .heritage-btn {
+    margin-top: -8px;
+
+    position: relative;
+
+    z-index: 2;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 430px) {
+
+  .heritage-strip {
+    padding: 45px 0;
+
+    overflow: hidden;
+  }
+
+
+  .heritage-grid {
+    width: calc(100% - 28px);
+
+    margin: 0 auto;
+
+    gap: 34px;
+  }
+
+
+  /* -----------------------------------------
+     IMAGE
+     ----------------------------------------- */
+
+  .heritage-image-wrap {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+  .heritage-image-wrap img {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    max-width: 100%;
+
+    border-radius: 5px 70px 5px 70px;
+  }
+
+
+  /* -----------------------------------------
+     BADGE
+     ----------------------------------------- */
+
+  .image-badge {
+    bottom: -12px;
+
+    left: 50%;
+
+    margin-left: 0;
+
+    transform: translateX(-50%);
+
+    padding: 9px 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* -----------------------------------------
+     TEXT
+     ----------------------------------------- */
+
+  .heritage-copy {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+  }
+
+
+  .heritage-copy .kicker {
+    font-size: 10px;
+  }
+
+
+  /* -----------------------------------------
+     TITLE
+     ----------------------------------------- */
+
+  .heritage-title {
+    width: 100%;
+
+    gap: 7px;
+  }
+
+
+  .heritage-main-title {
+    font-size: 26px;
+
+    max-width: calc(100% - 45px);
+
+    line-height: 1.05;
+
+    white-space: normal;
+  }
+
+
+  /* -----------------------------------------
+     MEMORIES
+     ----------------------------------------- */
+
+  .memories-vertical {
+    font-size: 22px;
+
+    margin-top: 12px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------------------
+     PARAGRAPH
+     ----------------------------------------- */
+
+  .heritage-copy > p {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 0 26px 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* -----------------------------------------
+     POINTS
+     ----------------------------------------- */
+
+  .heritage-points {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 14px;
+  }
+
+
+  .heritage-points > div {
+    font-size: 13px;
+
+    gap: 9px;
+  }
+
+
+  .heritage-points > div > span {
+    font-size: 16px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------------------
+     TREE
+     ----------------------------------------- */
+
+  .heritage-tree-wrap {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+  .heritage-tree-image {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+  }
+
+
+  /* -----------------------------------------
+     FAMILY SLOGAN
+     ----------------------------------------- */
+
+  .family-slogan-image {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin-top: -5px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 375px) {
+
+  .heritage-strip {
+    padding: 40px 0;
+  }
+
+
+  .heritage-grid {
+    width: calc(100% - 22px);
+
+    gap: 30px;
+  }
+
+
+  .heritage-title {
+    gap: 5px;
+  }
+
+
+  .heritage-main-title {
+    font-size: 26px;
+
+    max-width: calc(100% - 42px);
+  }
+
+
+  .memories-vertical {
+    font-size: 22px;
+
+    margin-top: 10px;
+  }
+
+
+  .heritage-copy > p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 24px;
+  }
+
+
+  .heritage-points {
+    row-gap: 13px;
+  }
+
+
+  .heritage-points > div {
+    font-size: 13px;
+
+    gap: 8px;
+  }
+
+
+  .image-badge {
+    padding: 8px 11px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 360px) {
+
+  .heritage-grid {
+    width: calc(100% - 18px);
+  }
+
+
+  .heritage-main-title {
+    font-size: 26px;
+
+    max-width: calc(100% - 40px);
+  }
+
+
+  .memories-vertical {
+    font-size: 22px;
+
+    margin-top: 9px;
+  }
+
+
+  .heritage-copy > p {
+    font-size: 14px;
+  }
+
+
+  .heritage-points > div {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   MOBILE — MOVE HERITAGE CONTENT UP
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  /* Move the tree + its border area upward */
+  .heritage-tree-wrap {
+    transform: translateY(-25px);
+  }
+
+  /* Move Memories upward */
+  .memories-vertical {
+    transform: translateY(-20px);
+  }
+
+  /* Move Heritage matter upward */
+  .heritage-copy > p {
+    transform: translateY(-20px);
+  }
+
+  /* Move points/matter upward together */
+  .heritage-points {
+    transform: translateY(-20px);
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 430px) {
+
+  .heritage-tree-wrap {
+    transform: translateY(-30px);
+  }
+
+  .memories-vertical {
+    transform: translateY(-25px);
+  }
+
+  .heritage-copy > p {
+    transform: translateY(-25px);
+  }
+
+  .heritage-points {
+    transform: translateY(-25px);
+  }
+}
+
+
+/* =========================================
+   375px MOBILE
+   ========================================= */
+
+@media (max-width: 375px) {
+
+  .heritage-tree-wrap {
+    transform: translateY(-35px);
+  }
+
+  .memories-vertical {
+    transform: translateY(-28px);
+  }
+
+  .heritage-copy > p {
+    transform: translateY(-28px);
+  }
+
+  .heritage-points {
+    transform: translateY(-28px);
+  }
+}
