@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef3f8;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .job-application {
+            padding: 60px 20px;
+        }
+
+        .form-container {
+            width: 900px;
+            max-width: 100%;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 12px;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.90),
+                    rgba(255, 255, 255, 0.90)
+                ),
+                url("images/job imge.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #005b8f;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full-width {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        label span {
+            color: red;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #d8d8d8;
+            border-radius: 5px;
+            font-size: 15px;
+            transition: 0.3s;
+            outline: none;
+            background: #fff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1b7eb8;
+            box-shadow: 0 0 6px rgba(27, 126, 184, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .three-column {
+            display: flex;
+            gap: 15px;
+        }
+
+        .three-column input {
+            flex: 1;
+        }
+
+        /* ================================
+           AADHAAR BOXES
+        ================================= */
+
+        .aadhaar-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .aadhaar-input {
+            width: 30px;
+            height: 38px;
+            padding: 0;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .aadhaar-input:focus {
+            border-color: #0077b6;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 119, 182, 0.25);
+        }
+
+        /* ================================
+           SUBMIT BUTTON
+        ================================= */
+
+        .submit-btn {
+            width: 220px;
+            padding: 14px;
+            background: #0077b6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .submit-btn:hover {
+            background: #005d8c;
+            transform: translateY(-2px);
+        }
+
+        /* ================================
+           BACK BUTTON
+        ================================= */
+
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 15px auto 40px;
+
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+
+            padding: 14px 25px;
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* ================================
+           QUOTE BOX
+        ================================= */
+
+        .quote {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 230px;
+            padding: 25px;
+
+            text-align: center;
+            color: #0d4f8b;
+
+            opacity: 0.20;
+            pointer-events: none;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .quote h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #02111a;
+        }
+
+        .quote p {
+            font-size: 24px;
+            line-height: 1.7;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .left-quote {
+            left: 40px;
+        }
+
+        .right-quote {
+            right: 40px;
+        }
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 1200px) {
+            .quote {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .job-application {
+                padding: 30px 15px;
+            }
+
+            .form-container {
+                width: 100%;
+                padding: 25px;
+            }
+
+            .form-row,
+            .three-column {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .submit-btn {
+                width: 100%;
+            }
+
+            .aadhaar-boxes {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .aadhaar-input {
+                width: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- LEFT QUOTE -->
+    <div class="quote left-quote">
+
+        <h2>💼 Your Career Starts Here</h2>
+
+        <p>
+            "Choose a job you love, and you will never have to work a day in your life."
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT QUOTE -->
+    <div class="quote right-quote">
+
+        <h2>🚀 Dream • Apply • Achieve</h2>
+
+        <p>
+            "Success is where preparation and opportunity meet."
+        </p>
+
+    </div>
+
+
+    <!-- ================================
+         JOB APPLICATION
+    ================================= -->
+
+    <section class="job-application">
+
+        <div class="form-container">
+
+            <h2>Job Application Form</h2>
+
+
+            <!--
+                IMPORTANT:
+                PHP will receive this form.
+            -->
+
+           <form
+    action="php/indian-it-form.php"
+    method="POST"
+    enctype="multipart/form-data"
+>
+
+                <!-- JOB CATEGORY -->
+                <input
+                    type="hidden"
+                    name="job_category"
+                    id="job_category"
+                    value="Job Application"
+                >
+
+
+                <!-- ================================
+                     FULL NAME
+                ================================= -->
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Full Name as per ADHAR <span>*</span>
+                    </label>
+
+                    <div class="three-column">
+
+                        <input
+                            type="text"
+                            name="first_name"
+                            placeholder="First Name"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            name="middle_name"
+                            placeholder="Middle Name"
+                        >
+
+                        <input
+                            type="text"
+                            name="last_name"
+                            placeholder="Last Name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     BIRTH DATE + PAN + AADHAAR
+                ================================= -->
+
+                <div class="form-row">
+
+
+                    <!-- BIRTH DATE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Birth Date <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            name="birth_date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PAN + AADHAAR -->
+
+                    <div class="form-group">
+
+                        <label>
+                            PAN <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="pan"
+                            placeholder="PAN"
+                            maxlength="10"
+                            required
+                        >
+
+
+                        <label style="margin-top:15px;">
+
+                            Aadhaar Card Number <span>*</span>
+
+                        </label>
+
+
+                        <div class="aadhaar-boxes">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                            <input type="text" maxlength="1"
+                                   class="aadhaar-input">
+
+                        </div>
+
+
+                        <!--
+                            Hidden field.
+                            JavaScript combines all 12 Aadhaar
+                            boxes into this value before submit.
+                        -->
+
+                        <input
+                            type="hidden"
+                            name="aadhaar"
+                            id="aadhaar"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     EMAIL + PHONE
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     JOB + SKILLS
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Looking for Job As <span>*</span>
+                        </label>
+
+                        <select
+                            name="job_position"
+                            required
+                        >
+
+                            <option value="">
+                                Select Position
+                            </option>
+
+                            <option value="Software Developer">
+                                Software Developer
+                            </option>
+
+                            <option value="UI/UX Designer">
+                                UI/UX Designer
+                            </option>
+
+                            <option value="HR Executive">
+                                HR Executive
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Skills / Job Title <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="skills"
+                            placeholder="Eg: PHP, HTML, React"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     QUALIFICATION + EXPERIENCE
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Highest Qualification
+                        </label>
+
+                        <input
+                            type="text"
+                            name="qualification"
+                            placeholder="Qualification"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Experience
+                        </label>
+
+                        <input
+                            type="text"
+                            name="experience"
+                            placeholder="Experience"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     CURRENT + EXPECTED CTC
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Current CTC <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="current_ctc"
+                            placeholder="AS PER MARKET STANDARDS"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Expected CTC <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="expected_ctc"
+                            placeholder="AS PER MARKET STANDARDS"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     NOTICE + CURRENT LOCATION
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Notice Period <span>*</span>
+                        </label>
+
+                        <select
+                            name="notice_period"
+                            required
+                        >
+
+                            <option value="">
+                                Select Notice Period
+                            </option>
+
+                            <option value="Immediate">
+                                Immediate
+                            </option>
+
+                            <option value="15 Days">
+                                15 Days
+                            </option>
+
+                            <option value="30 Days">
+                                30 Days
+                            </option>
+
+                            <option value="45 Days">
+                                45 Days
+                            </option>
+
+                            <option value="60 Days">
+                                60 Days
+                            </option>
+
+                            <option value="90 Days">
+                                90 Days
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Current Location <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="current_location"
+                            placeholder="Current City"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     PREFERRED LOCATION + EMPLOYMENT
+                ================================= -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Preferred Job Location <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="preferred_location"
+                            placeholder="Preferred City"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Employment Type <span>*</span>
+                        </label>
+
+                        <select
+                            name="employment_type"
+                            required
+                        >
+
+                            <option value="">
+                                Select Type
+                            </option>
+
+                            <option value="Full Time">
+                                Full Time
+                            </option>
+
+                            <option value="Part Time">
+                                Part Time
+                            </option>
+
+                            <option value="Contract">
+                                Contract
+                            </option>
+
+                            <option value="Internship">
+                                Internship
+                            </option>
+
+                            <option value="Work From Home">
+                                Work From Home
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     RESUME
+                ================================= -->
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Upload Resume <span>*</span>
+                    </label>
+
+                    <input
+                        type="file"
+                        name="resume"
+                        accept=".pdf,.doc,.docx"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ================================
+                     SUBMIT
+                ================================= -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Apply Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- BACK BUTTON -->
+
+    <a
+        href="technical-jobs.html"
+        class="back-btn"
+    >
+        Back To Jobs
+    </a>
+
+
+    <!-- ================================
+         AADHAAR JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+        const inputs =
+            document.querySelectorAll(".aadhaar-input");
+
+        const aadhaarHidden =
+            document.getElementById("aadhaar");
+
+
+        inputs.forEach((input, index) => {
+
+            /* Only numbers */
+
+            input.addEventListener("input", function () {
+
+                this.value =
+                    this.value.replace(/\D/g, "");
+
+                if (
+                    this.value.length === 1 &&
+                    index < inputs.length - 1
+                ) {
+
+                    inputs[index + 1].focus();
+
+                }
+
+            });
+
+
+            /* Backspace */
+
+            input.addEventListener("keydown", function (e) {
+
+                if (
+                    e.key === "Backspace" &&
+                    this.value === "" &&
+                    index > 0
+                ) {
+
+                    inputs[index - 1].focus();
+
+                }
+
+            });
+
+
+            /* Paste complete Aadhaar */
+
+            input.addEventListener("paste", function (e) {
+
+                e.preventDefault();
+
+                const paste =
+                    (e.clipboardData || window.clipboardData)
+                    .getData("text")
+                    .replace(/\D/g, "")
+                    .slice(0, 12);
+
+
+                paste.split("").forEach((digit, i) => {
+
+                    if (inputs[i]) {
+
+                        inputs[i].value = digit;
+
+                    }
+
+                });
+
+
+                if (paste.length > 0) {
+
+                    inputs[
+                        Math.min(paste.length, 12) - 1
+                    ].focus();
+
+                }
+
+            });
+
+        });
+
+
+        /* ================================
+           COMBINE AADHAAR BEFORE SUBMIT
+        ================================= */
+
+        document.querySelector("form").addEventListener(
+            "submit",
+            function () {
+
+                let aadhaar = "";
+
+                inputs.forEach(function (input) {
+
+                    aadhaar += input.value;
+
+                });
+
+                aadhaarHidden.value = aadhaar;
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,645 @@
+/* =========================================================
+   PSPL / PARADESI SOLUTIONS
+   ABROAD JOB SUPPORT APPLICATION
+========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ---------- BODY ---------- */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/job support.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ---------- HEADING ---------- */
+
+h1 {
+    text-align: center;
+
+    color: #003366;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+.subtitle {
+    text-align: center;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* ---------- FORM ---------- */
+
+form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* ---------- FULL WIDTH ---------- */
+
+.full {
+    grid-column: 1 / 3;
+}
+
+
+/* ---------- LABEL ---------- */
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #222;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ---------- INPUT FOCUS ---------- */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+
+/* ---------- PLACEHOLDER ---------- */
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+
+/* ---------- TEXTAREA ---------- */
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* ---------- SELECT ---------- */
+
+select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* =========================================================
+   PASSPORT DATE BOXES
+========================================================= */
+
+.passport-date-boxes {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.passport-input {
+    width: 60px;
+
+    height: 45px;
+
+    padding: 8px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    border: 2px solid #ccc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.passport-input.year-box {
+    width: 90px;
+}
+
+
+.passport-input:focus {
+    border-color: #007bff;
+
+    box-shadow:
+        0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+========================================================= */
+
+input[type="file"] {
+    padding: 10px;
+
+    cursor: pointer;
+
+    background: #fff;
+}
+
+
+input[type="file"]::file-selector-button {
+    padding: 9px 16px;
+
+    margin-right: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #007bff;
+
+    color: #fff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+input[type="file"]::file-selector-button:hover {
+    background: #0056b3;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+button[type="submit"] {
+    width: 100%;
+
+    background: #007bff;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 15px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 5px 15px rgba(0, 123, 255, 0.25);
+}
+
+
+button[type="submit"]:hover {
+    background: #0056b3;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 86, 179, 0.35);
+}
+
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SUCCESS POPUP
+========================================================= */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+
+.popup-content {
+    position: relative;
+
+    width: 500px;
+
+    max-width: 95%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.35);
+
+    animation: popupOpen 0.3s ease;
+}
+
+
+@keyframes popupOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.popup-content h2 {
+    color: #28a745;
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    line-height: 1.4;
+}
+
+
+.popup-content p {
+    color: #444;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+.popup-content button {
+    background: #007bff;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 10px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.popup-content button:hover {
+    background: #0056b3;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.close {
+    position: absolute;
+
+    top: 10px;
+
+    right: 18px;
+
+    font-size: 28px;
+
+    color: #333;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+.close:hover {
+    color: #007bff;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.back-home {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    text-align: left;
+}
+
+
+.back-btn {
+    display: inline-block;
+
+    background: #0d6efd;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+
+.back-btn:hover {
+    background: #084298;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(13, 110, 253, 0.4);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 94%;
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    h1 {
+        font-size: 25px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    form {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .full {
+        grid-column: auto;
+    }
+
+
+    .passport-date-boxes {
+        gap: 7px;
+    }
+
+
+    .passport-input {
+        width: 55px;
+
+        height: 42px;
+    }
+
+
+    .passport-input.year-box {
+        width: 75px;
+    }
+
+
+    button[type="submit"] {
+        font-size: 16px;
+
+        padding: 14px;
+    }
+
+
+    .back-home {
+        width: 94%;
+
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 22px 15px;
+    }
+
+
+    h1 {
+        font-size: 22px;
+    }
+
+
+    .passport-date-boxes {
+        width: 100%;
+    }
+
+
+    .passport-input {
+        flex: 1;
+
+        width: auto;
+    }
+
+
+    .passport-input.year-box {
+        flex: 1.4;
+
+        width: auto;
+    }
+
+
+    .popup-content {
+        padding: 25px 18px;
+    }
+
+
+    .popup-content h2 {
+        font-size: 19px;
+    }
+
+}
