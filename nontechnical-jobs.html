@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Non-IT Jobs | Paradesi Solutions™</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --bg-header: #ffffff;
+            --accent: #d4af37;
+            --accent-hover: #0f38f1;
+
+            --text-heading: #f8fafc;
+            --text-body: #555555;
+
+            --font-body: 'Manrope', sans-serif;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-body);
+            line-height: 1.7;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            font-weight: 700;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #011573;
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            margin-left: 0px;
+            background: #ffffff;
+            border-bottom: 1px solid #41be5cd7;
+            backdrop-filter: blur(10px);
+
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+            padding: 12px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+
+            color: blue;
+
+            padding-bottom: 5px;
+
+            border-bottom: 2px solid transparent;
+
+            opacity: 0.8;
+        }
+
+
+        nav a:hover {
+            color: greenyellow;
+            opacity: 1;
+            border-bottom: 2px solid green;
+        }
+
+
+        .btn-header {
+            padding: 10px 20px;
+
+            background: transparent;
+
+            color: green !important;
+
+            border: 1px solid var(--accent);
+
+            border-radius: 2px;
+
+            opacity: 1;
+        }
+
+
+        .btn-header:hover {
+            background: white;
+            color: green !important;
+        }
+
+
+        /* =========================================
+           PAGE
+        ========================================= */
+
+        .page {
+            padding: 140px 40px 60px;
+        }
+
+
+        h1 {
+            text-align: center;
+
+            color: #008000;
+
+            margin-bottom: 60px;
+
+            font-size: 38px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           JOB CARDS
+        ========================================= */
+
+        .jobs-container {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .job-card {
+            background: #ffffff;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.1);
+
+            border-top: 4px solid #008000;
+
+            font-weight: 700;
+        }
+
+
+        .job-card h3 {
+            color: #008000;
+
+            margin-bottom: 15px;
+
+            font-size: 20px;
+
+            font-weight: 800;
+        }
+
+
+        .job-card p {
+            margin: 10px 0;
+
+            color: #555;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================
+           APPLY BUTTON
+        ========================================= */
+
+        .apply-btn {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            background: #006B8F;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            font-weight: 800;
+
+            border: none;
+
+            cursor: pointer;
+        }
+
+
+        .apply-btn:hover {
+            color: rgba(230, 243, 230, 0.904);
+
+            background: #0ec71e;
+        }
+
+
+        .apply-btn::after {
+            content: " →";
+        }
+
+
+        /* =========================================
+           POPUP
+        ========================================= */
+
+        .popup {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.7);
+
+            z-index: 9999;
+        }
+
+
+        .popup:target {
+            display: block;
+        }
+
+
+        .popup-box {
+            width: 500px;
+
+            max-width: 90%;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================
+           CLOSE BUTTON
+        ========================================= */
+
+        .close-btn {
+            position: absolute;
+
+            right: 15px;
+
+            top: 10px;
+
+            text-decoration: none;
+
+            font-size: 30px;
+
+            color: black;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           POPUP TITLE
+        ========================================= */
+
+        .popup-box h2 {
+            text-align: center;
+
+            color: #008000;
+
+            margin-bottom: 25px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================
+           JOB DETAILS
+        ========================================= */
+
+        .job-details {
+            color: #555;
+
+            font-weight: 700;
+        }
+
+
+        .job-details p {
+            margin-bottom: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .job-details h4 {
+            color: #008000;
+
+            margin-top: 20px;
+
+            margin-bottom: 8px;
+
+            font-weight: 800;
+        }
+
+
+        .job-details ul {
+            list-style: disc;
+
+            padding-left: 22px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .job-details li {
+            margin-bottom: 8px;
+
+            font-weight: 700;
+        }
+
+
+        .job-details strong {
+            font-weight: 800;
+        }
+
+
+        .details-apply {
+            display: inline-block;
+
+            margin-top: 20px;
+        }
+
+
+        /* =========================================
+           BACK BUTTON
+        ========================================= */
+
+        .back-btn {
+            display: block;
+
+            width: 220px;
+
+            text-align: center;
+
+            margin: 50px auto;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+            font-weight: 800;
+        }
+
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .jobs-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            nav ul {
+                gap: 12px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            header {
+                margin-left: 0;
+
+                padding: 8px 20px;
+            }
+
+
+            nav ul {
+                display: none;
+            }
+
+
+            .page {
+                padding: 120px 20px 40px;
+            }
+
+
+            .jobs-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .popup-box {
+                width: 95%;
+
+                padding: 25px;
+            }
+
+
+            h1 {
+                font-size: 30px;
+
+                margin-bottom: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="images/Latest-Logo-TM.png"
+                    width="80%"
+                    alt="Paradesi Solutions Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <nav id="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="WEBSITE.html#home">
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="WEBSITE.html#about">
+                        About Us
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="WEBSITE.html#hire">
+                        We Hire
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="WEBSITE.html#services">
+                        Services
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="WEBSITE.html#clients">
+                        Our Clients
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="WEBSITE.html#careers">
+                        Careers
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a
+                        href="WEBSITE.html#contact"
+                        class="btn-header"
+                    >
+                        Let's Talk
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         NON-IT JOBS
+    ========================================= -->
+
+    <main class="page">
+
+
+        <h1>
+            Non-IT Jobs
+        </h1>
+
+
+
+        <div class="jobs-container">
+
+
+            <!-- =====================================
+                 JOB 1
+            ====================================== -->
+
+            <div class="job-card">
+
+                <h3>
+                    Customer Care Executive
+                    (Non-Voice Process)
+                </h3>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    Hyderabad
+                </p>
+
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ASAP
+                </p>
+
+
+                <a
+                    href="#customer-nonvoice"
+                    class="apply-btn"
+                >
+                    For more details
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 JOB 2
+            ====================================== -->
+
+            <div class="job-card">
+
+                <h3>
+                    Customer Care Executive
+                    (Voice Process)
+                </h3>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    Hyderabad
+                </p>
+
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ASAP
+                </p>
+
+
+                <a
+                    href="#customer-voice"
+                    class="apply-btn"
+                >
+                    For more details
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 JOB 3
+            ====================================== -->
+
+            <div class="job-card">
+
+                <h3>
+                    Inside Sales Manager
+                    (Individual Contributor)
+                </h3>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    Hyderabad
+                </p>
+
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ASAP
+                </p>
+
+
+                <a
+                    href="#inside-sales"
+                    class="apply-btn"
+                >
+                    For more details
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 JOB 4
+            ====================================== -->
+
+            <div class="job-card">
+
+                <h3>
+                    Business Development Executive
+                    – AMEX Process
+                </h3>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    Hyderabad
+                </p>
+
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ASAP
+                </p>
+
+
+                <a
+                    href="#business-development"
+                    class="apply-btn"
+                >
+                    For more details
+                </a>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 JOB 5
+            ====================================== -->
+
+            <div class="job-card">
+
+                <h3>
+                    Video Editor
+                </h3>
+
+
+                <p>
+                    <strong>Location:</strong>
+                    Hyderabad
+                </p>
+
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ASAP
+                </p>
+
+
+                <a
+                    href="#video-editor"
+                    class="apply-btn"
+                >
+                    For more details
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             POPUP 1
+             CUSTOMER CARE NON-VOICE
+        ========================================= -->
+
+        <div
+            id="customer-nonvoice"
+            class="popup"
+        >
+
+            <div class="popup-box">
+
+
+                <a
+                    href="#"
+                    class="close-btn"
+                >
+                    &times;
+                </a>
+
+
+                <h2>
+                    Customer Care Executive
+                    (Non-Voice Process)
+                </h2>
+
+
+                <div class="job-details">
+
+
+                    <p>
+                        <strong>
+                            No. of Positions:
+                        </strong>
+
+                        350
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Shift Time:
+                        </strong>
+
+                        Rotational Shifts
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Type:
+                        </strong>
+
+                        Domestic Process-Full Time
+                    </p>
+
+
+
+                    <h4>
+                        Qualification Requirements:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Any Graduation.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h4>
+                        Description &amp; Skills Required:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Handling Inbound &amp; Outbound Customer
+                            calls (Domestic process).
+                        </li>
+
+
+                        <li>
+                            Answering inbound calls for Voice processes.
+                        </li>
+
+
+                        <li>
+                            Catering to complaint management desk
+                            where associates will get queries /
+                            requests / complaints through Calls /
+                            Mails.
+                        </li>
+
+
+                        <li>
+                            Fresher's/BPO Experienced Candidates.
+                        </li>
+
+
+                        <li>
+                            Excellent Communication skills in
+                            English, Hindi, Telugu and Kannada
+                            (ANY TWO LANGUAGES IS MANDATORY).
+                        </li>
+
+                    </ul>
+
+
+
+                    <p>
+
+                        <strong>
+                            Joining:
+                        </strong>
+
+                        Immediate
+
+                    </p>
+
+
+
+                    <p>
+
+                        <strong>
+                            Interview Date, Time &amp; Place:
+                        </strong>
+
+                        Candidate will get the Mail/SMS
+
+                    </p>
+
+
+
+                    <p>
+                        <strong>
+                            Terms &amp; Conditions Applicable
+                        </strong>
+                    </p>
+
+
+
+                    <a
+                        href="applicationform.html"
+                        class="apply-btn details-apply"
+                    >
+                        Apply Now
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             POPUP 2
+             CUSTOMER CARE VOICE
+        ========================================= -->
+
+        <div
+            id="customer-voice"
+            class="popup"
+        >
+
+            <div class="popup-box">
+
+
+                <a
+                    href="#"
+                    class="close-btn"
+                >
+                    &times;
+                </a>
+
+
+                <h2>
+                    Customer Care Executive
+                    (Voice Process)
+                </h2>
+
+
+                <div class="job-details">
+
+
+                    <p>
+
+                        <strong>
+                            No. of Positions:
+                        </strong>
+
+                        50
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Shift Time:
+                        </strong>
+
+                        Rotational Shifts
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Type:
+                        </strong>
+
+                        Voice &amp; Non-Voice Process-Full Time
+
+                    </p>
+
+
+
+                    <h4>
+                        Qualification Requirements:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Any Graduation.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h4>
+                        Skills &amp; Description:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Age not &gt;30 Years.
+                        </li>
+
+
+                        <li>
+                            Fresher's/Experienced Candidates.
+                        </li>
+
+
+                        <li>
+                            Any Banking Experience also can be considerable.
+                        </li>
+
+
+                        <li>
+                            Good Communication skills
+                            (ENGLISH, TELUGU &amp; HINDI) Mandatory.
+                        </li>
+
+                    </ul>
+
+
+
+                    <p>
+
+                        <strong>
+                            Joining:
+                        </strong>
+
+                        Immediate
+
+                    </p>
+
+
+
+                    <p>
+
+                        <strong>
+                            Interview Date, Time &amp; Place:
+                        </strong>
+
+                        Candidate will get the Mail/SMS
+
+                    </p>
+
+
+
+                    <a
+                        href="applicationform.html"
+                        class="apply-btn details-apply"
+                    >
+                        Apply Now
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             POPUP 3
+             INSIDE SALES MANAGER
+        ========================================= -->
+
+        <div
+            id="inside-sales"
+            class="popup"
+        >
+
+            <div class="popup-box">
+
+
+                <a
+                    href="#"
+                    class="close-btn"
+                >
+                    &times;
+                </a>
+
+
+                <h2>
+                    Inside Sales Manager
+                    (Individual Contributor)
+                </h2>
+
+
+                <div class="job-details">
+
+
+                    <p>
+
+                        <strong>
+                            No. of Positions:
+                        </strong>
+
+                        50
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Shift Time:
+                        </strong>
+
+                        Rotational Shifts
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Type:
+                        </strong>
+
+                        Domestic Process-Full Time
+
+                    </p>
+
+
+
+                    <h4>
+                        Qualification Requirements:
+                    </h4>
+
+
+                    <p>
+
+                        BSc, B.Pharma, Masters or MBA are first
+                        preference
+                        <strong>
+                            (Bachelor's Degree Not mandatory).
+                        </strong>
+
+                    </p>
+
+
+
+                    <h4>
+                        Skills:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            1-6 Years for inside sales manager
+                            (Individual Manager) Experience in
+                            Inside or Telesales.
+                        </li>
+
+
+                        <li>
+                            Excellent communication, counselling
+                            &amp; selling skills.
+                        </li>
+
+
+                        <li>
+                            Knowledge of MSWord, Excel,
+                            Power Point &amp; Outlook.
+                        </li>
+
+
+                        <li>
+                            Basic knowledge of methods involved
+                            in presenting, promoting and selling
+                            products or services.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h4>
+                        Description:
+                    </h4>
+
+
+                    <p>
+                        <strong>
+                            Key Responsibilities:
+                        </strong>
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            As Sales Executive E-Sales, you should
+                            achieve the assigned sales target and
+                            eventually generate revenues for the
+                            organisation.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h4>
+                        Key Responsibilities:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Responsible for the course promotion
+                            and sales.
+                        </li>
+
+
+                        <li>
+                            Meet the target set by the Team Leader.
+                        </li>
+
+
+                        <li>
+                            Effective utilisation of leads and
+                            maintain a positive and healthy
+                            conversion rate.
+                        </li>
+
+
+                        <li>
+                            Exceptional communication skills.
+                        </li>
+
+
+                        <li>
+                            Create a positive brand image and
+                            awareness among prospective students.
+                        </li>
+
+
+                        <li>
+                            Have a good understanding of the product
+                            information and ensure proper handling
+                            of all queries of the students by
+                            effective counselling.
+                        </li>
+
+
+                        <li>
+                            Make the sales pitch according the
+                            customers behaviour and requirements.
+                        </li>
+
+                    </ul>
+
+
+
+                    <p>
+
+                        <strong>
+                            Joining:
+                        </strong>
+
+                        Immediate
+
+                    </p>
+
+
+
+                    <p>
+
+                        <strong>
+                            Interview Date, Time &amp; Place:
+                        </strong>
+
+                        Candidate will get the Mail/SMS
+
+                    </p>
+
+
+
+                    <a
+                        href="applicationform.html"
+                        class="apply-btn details-apply"
+                    >
+                        Apply Now
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             POPUP 4
+             BUSINESS DEVELOPMENT
+        ========================================= -->
+
+        <div
+            id="business-development"
+            class="popup"
+        >
+
+            <div class="popup-box">
+
+
+                <a
+                    href="#"
+                    class="close-btn"
+                >
+                    &times;
+                </a>
+
+
+                <h2>
+                    Business Development Executive
+                    – AMEX Process
+                </h2>
+
+
+                <div class="job-details">
+
+
+                    <p>
+
+                        <strong>
+                            No. of Positions:
+                        </strong>
+
+                        50
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Shift Time:
+                        </strong>
+
+                        Rotational Shifts
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Type:
+                        </strong>
+
+                        Domestic Process-Full Time
+
+                    </p>
+
+
+
+                    <h4>
+                        Qualification Requirements:
+                    </h4>
+
+
+                    <p>
+
+                        Any graduate/Post graduate
+                        (preferable MBA- Marketing).
+
+                    </p>
+
+
+
+                    <h4>
+                        Skills &amp; Description:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Age not &gt;30 Years.
+                        </li>
+
+
+                        <li>
+                            The resources will be responsible
+                            for direct sales &amp; marketing
+                            (FIELD).
+                        </li>
+
+
+                        <li>
+                            The resources will be responsible
+                            for developing excellent network
+                            in corporate.
+                        </li>
+
+
+                        <li>
+                            The resources will be responsible
+                            for generation of new business
+                            data base (LEAD GENERATION).
+                        </li>
+
+
+                        <li>
+                            The candidate must be excellent
+                            in verbal commutation skills.
+                        </li>
+
+
+                        <li>
+                            The candidate should have
+                            retail/FMCG Product sales
+                            experience/fresher interested
+                            in sales can also apply.
+                        </li>
+
+
+                        <li>
+                            The candidate having experience
+                            in banking product sales would
+                            be an added advantage.
+                        </li>
+
+
+                        <li>
+                            The candidate having two wheeler
+                            is mandatory is preferred.
+                        </li>
+
+                    </ul>
+
+
+
+                    <p>
+
+                        <strong>
+                            Joining:
+                        </strong>
+
+                        Immediate
+
+                    </p>
+
+
+
+                    <p>
+
+                        <strong>
+                            Interview Date, Time &amp; Place:
+                        </strong>
+
+                        Candidate will get the Mail/SMS
+
+                    </p>
+
+
+
+                    <a
+                        href="applicationform.html"
+                        class="apply-btn details-apply"
+                    >
+                        Apply Now
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             POPUP 5
+             VIDEO EDITOR
+        ========================================= -->
+
+        <div
+            id="video-editor"
+            class="popup"
+        >
+
+            <div class="popup-box">
+
+
+                <a
+                    href="#"
+                    class="close-btn"
+                >
+                    &times;
+                </a>
+
+
+                <h2>
+                    Video Editor, Hyderabad
+                </h2>
+
+
+                <div class="job-details">
+
+
+                    <p>
+
+                        <strong>
+                            No. of Positions:
+                        </strong>
+
+                        50
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Shift Time:
+                        </strong>
+
+                        General Shifts
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Type:
+                        </strong>
+
+                        Full Time
+
+                    </p>
+
+
+
+                    <h4>
+                        Qualification Requirements:
+                    </h4>
+
+
+                    <p>
+
+                        B. Tech/M. Tech/MCA
+                        (Bachelors/Masters) or equivalent
+                        from reputed colleges with good
+                        academics records.
+
+                    </p>
+
+
+
+                    <h4>
+                        Responsibilities:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Data Sourcing and Management -
+                            Downloading copyright protected
+                            images, audio, video related to
+                            subject topics.
+                        </li>
+
+
+                        <li>
+                            Editing images, and raw video
+                            footages, and audio clippings.
+                        </li>
+
+
+                        <li>
+                            Develop managing skills and
+                            business knowledge to grow into
+                            a Editing Development manager.
+                        </li>
+
+                    </ul>
+
+
+
+                    <h4>
+                        Skills &amp; Description:
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Fluency in English.
+                        </li>
+
+
+                        <li>
+                            Drawing /art.
+                        </li>
+
+
+                        <li>
+                            Corel Draw, Photoshop, paint,
+                            or similar softwares. And
+                            Microsoft Word, Excel,
+                            PowerPoint.
+                        </li>
+
+
+                        <li>
+                            Internet usage and data finding.
+                        </li>
+
+
+                        <li>
+                            Able to handle Audio &amp; video
+                            editing softwares.
+                        </li>
+
+                    </ul>
+
+
+
+                    <p>
+
+                        <strong>
+                            Joining:
+                        </strong>
+
+                        Immediate
+
+                    </p>
+
+
+
+                    <p>
+
+                        <strong>
+                            Interview Date, Time &amp; Place:
+                        </strong>
+
+                        Candidate will get the Mail/SMS
+
+                    </p>
+
+
+
+                    <a
+                        href="applicationform.html"
+                        class="apply-btn details-apply"
+                    >
+                        Apply Now
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             BACK BUTTON
+        ========================================= -->
+
+        <a
+            href="WEBSITE.html"
+            class="back-btn"
+        >
+            Back To Home
+        </a>
+
+
+    </main>
+
+
+</body>
+
+</html>

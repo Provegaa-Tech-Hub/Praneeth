@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abroad Job Support Application | Paradesi Solutions</title>
+
+    <!-- APPLICATION CSS -->
+    <link rel="stylesheet" href="application.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         MAIN APPLICATION CONTAINER
+    ====================================================== -->
+
+    <div class="container">
+
+        <h1>Abroad Job Support Application</h1>
+
+        <p class="subtitle">
+            Complete the form below to receive overseas job assistance.
+        </p>
+
+
+        <!-- =================================================
+             JOB APPLICATION FORM
+        ================================================== -->
+
+        <form
+    id="jobForm"
+    action="php/job-form.php"
+    method="POST"
+    enctype="multipart/form-data"
+>
+            <!-- FULL NAME -->
+            <div>
+                <label>
+                    Full Name*
+                </label>
+
+                <input
+                    type="text"
+                    name="full_name"
+                    placeholder="Enter Full Name"
+                    required
+                >
+            </div>
+
+
+            <!-- MOBILE -->
+            <div>
+                <label>
+                    Mobile Number*
+                </label>
+
+                <input
+                    type="tel"
+                    name="mobile"
+                    placeholder="Enter Mobile Number"
+                    required
+                >
+            </div>
+
+
+            <!-- EMAIL -->
+            <div>
+                <label>
+                    Email Address*
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                >
+            </div>
+
+
+            <!-- DATE OF BIRTH -->
+            <div>
+                <label>
+                    Date of Birth*
+                </label>
+
+                <input
+                    type="date"
+                    name="date_of_birth"
+                    required
+                >
+            </div>
+
+
+            <!-- GENDER -->
+            <div>
+                <label>
+                    Gender
+                </label>
+
+                <select name="gender">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="Male">
+                        Male
+                    </option>
+
+                    <option value="Female">
+                        Female
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+            </div>
+
+
+            <!-- NATIONALITY -->
+            <div>
+                <label>
+                    Nationality
+                </label>
+
+                <input
+                    type="text"
+                    name="nationality"
+                    placeholder="Nationality"
+                >
+            </div>
+
+
+            <!-- CURRENT CITY -->
+            <div>
+                <label>
+                    Current City
+                </label>
+
+                <input
+                    type="text"
+                    name="current_city"
+                    placeholder="Current City"
+                >
+            </div>
+
+
+            <!-- PASSPORT NUMBER -->
+            <div>
+                <label>
+                    Passport Number*
+                </label>
+
+                <input
+                    type="text"
+                    name="passport_number"
+                    placeholder="Passport Number"
+                    required
+                >
+            </div>
+
+
+            <!-- PASSPORT VALID FROM -->
+            <div>
+
+                <label>
+                    Passport Valid From*
+                </label>
+
+                <div class="passport-date-boxes">
+
+                    <input
+                        type="text"
+                        name="passport_from_day"
+                        maxlength="2"
+                        class="passport-input"
+                        placeholder="DD"
+                        inputmode="numeric"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="passport_from_month"
+                        maxlength="2"
+                        class="passport-input"
+                        placeholder="MM"
+                        inputmode="numeric"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="passport_from_year"
+                        maxlength="4"
+                        class="passport-input year-box"
+                        placeholder="YYYY"
+                        inputmode="numeric"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSPORT VALID TO -->
+            <div>
+
+                <label>
+                    Passport Valid To*
+                </label>
+
+                <div class="passport-date-boxes">
+
+                    <input
+                        type="text"
+                        name="passport_to_day"
+                        maxlength="2"
+                        class="passport-input"
+                        placeholder="DD"
+                        inputmode="numeric"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="passport_to_month"
+                        maxlength="2"
+                        class="passport-input"
+                        placeholder="MM"
+                        inputmode="numeric"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        name="passport_to_year"
+                        maxlength="4"
+                        class="passport-input year-box"
+                        placeholder="YYYY"
+                        inputmode="numeric"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PREFERRED COUNTRY -->
+            <div>
+
+                <label>
+                    Preferred Country*
+                </label>
+
+                <select
+                    name="preferred_country"
+                    required
+                >
+
+                    <option value="">
+                        Select Country
+                    </option>
+
+                    <option value="Canada">
+                        Canada
+                    </option>
+
+                    <option value="USA">
+                        USA
+                    </option>
+
+                    <option value="Australia">
+                        Australia
+                    </option>
+
+                    <option value="United Kingdom">
+                        United Kingdom
+                    </option>
+
+                    <option value="Germany">
+                        Germany
+                    </option>
+
+                    <option value="Dubai (UAE)">
+                        Dubai (UAE)
+                    </option>
+
+                    <option value="Singapore">
+                        Singapore
+                    </option>
+
+                    <option value="Japan">
+                        Japan
+                    </option>
+
+                    <option value="New Zealand">
+                        New Zealand
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PREFERRED JOB ROLE -->
+            <div>
+
+                <label>
+                    Preferred Job Role
+                </label>
+
+                <input
+                    type="text"
+                    name="preferred_job_role"
+                    placeholder="Preferred Job Role"
+                >
+
+            </div>
+
+
+            <!-- PREFERRED LOCATION -->
+            <div>
+
+                <label>
+                    Preferred Location
+                </label>
+
+                <input
+                    type="text"
+                    name="preferred_location"
+                    placeholder="Preferred Location"
+                >
+
+            </div>
+
+
+            <!-- YEARS OF EXPERIENCE -->
+            <div>
+
+                <label>
+                    Years of Experience
+                </label>
+
+                <input
+                    type="number"
+                    name="years_experience"
+                    min="0"
+                    placeholder="Years"
+                >
+
+            </div>
+
+
+            <!-- NOTICE PERIOD -->
+            <div>
+
+                <label>
+                    Notice Period
+                </label>
+
+                <input
+                    type="text"
+                    name="notice_period"
+                    placeholder="Notice Period"
+                >
+
+            </div>
+
+
+            <!-- TECHNICAL SKILLS -->
+            <div class="full">
+
+                <label>
+                    Technical Skills
+                </label>
+
+                <textarea
+                    name="technical_skills"
+                    rows="4"
+                    placeholder="Enter your technical skills"
+                ></textarea>
+
+            </div>
+
+
+            <!-- UPLOAD CV -->
+            <div class="full">
+
+                <label>
+                    Upload CV*
+                </label>
+
+                <input
+                    type="file"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required
+                >
+
+            </div>
+
+
+            <!-- ADDITIONAL INFORMATION -->
+            <div class="full">
+
+                <label>
+                    Additional Information
+                </label>
+
+                <textarea
+                    name="additional_information"
+                    rows="5"
+                    placeholder="Enter additional information"
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+            <div class="full">
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Submit Application
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACK TO HOME
+    ====================================================== -->
+
+    <div class="back-home">
+
+        <a
+            href="WEBSITE.html"
+            class="back-btn"
+        >
+            ← Back to Home
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         PASSPORT INPUT SCRIPT
+         Automatically moves DD → MM → YYYY
+    ====================================================== -->
+
+    <script>
+
+        const passportInputs =
+            document.querySelectorAll(".passport-input");
+
+
+        passportInputs.forEach((input, index) => {
+
+            input.addEventListener("input", function () {
+
+                this.value =
+                    this.value.replace(/\D/g, "");
+
+                if (
+                    this.value.length === this.maxLength &&
+                    index < passportInputs.length - 1
+                ) {
+
+                    passportInputs[index + 1].focus();
+
+                }
+
+            });
+
+
+            input.addEventListener("keydown", function (event) {
+
+                if (
+                    event.key === "Backspace" &&
+                    this.value === "" &&
+                    index > 0
+                ) {
+
+                    passportInputs[index - 1].focus();
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
